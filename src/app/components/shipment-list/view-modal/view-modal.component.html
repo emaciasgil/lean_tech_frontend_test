@@ -1,0 +1,322 @@
+<div class="close">
+    <button (click)="onNoClickClose()" mat-icon-button type="button" style="margin-left: 94%;">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+<div class="scroll-panel" infiniteScroll [infiniteScrollDistance]="1" 
+[scrollWindow]="false">
+<div>
+    <div>
+        <div>
+                <p style="margin-left: 20px;"><b>Shipment Information</b></p>.
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+            <div fxFlex="10%">
+                <img width="50px" src="../../../../assets/icons/shipment info.svg" alt="" srcset="">
+            </div>
+            <div fxFlex="90%">
+                <div fxLayout="column">
+                    <div class="item"><b>Shipment Information</b></div>
+                    <div class="item">view and update all shipment data, generate pickup request and change shipment
+                        status
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+            <div fxFlex="50%">
+                <b>Actions</b> <br>
+                <div fxLayout="column">
+                    <div>Change shipment status and save</div>
+                </div>
+
+            </div>
+            <div fxFlex="50%">
+                <b>Shipment Tags</b><br>
+                <div fxLayout="column">
+                    <div>Set smart tag for shipments and make them searchable</div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+            <div fxFlex="100%">
+                <div fxLayout="20%" fxLayoutGap="0.5%">
+                    <mat-form-field class="select1">
+                        <mat-label matInput style="margin-left: 5px; color: white;"> Pickup Request</mat-label>
+
+                        <mat-select>
+                            <mat-option>
+                                Customer 1
+                            </mat-option>
+                            <mat-option>
+                                Customer 2
+                            </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+
+
+                    <div fxLayout="20%">
+                        <mat-form-field class="select2">
+                            <mat-label matInput style="margin-left: 5px; color:white"> Rated</mat-label>
+                            <mat-select>
+                                <mat-option>
+                                    Customer1
+                                </mat-option>
+                                <mat-option>
+                                    Customer2
+                                </mat-option>
+
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <div fxLayout="column">
+                    <mat-form-field class="example-form-field">
+                        <mat-label>Clearable input</mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+            <div fxFlex="50%">
+                <b>More Octions</b> <br>
+                <div fxLayout="column">
+                    Print Bol, Invoice, labels,requote and more.
+                </div>
+            </div>
+            <div fxFlex="15%">
+                <button class="options_modal" style="margin-left: 10px;">
+                    <img src="../../../assets/icons/bol.svg"> Bol
+                </button>
+            </div>
+            <div fxFlex="15%">
+                <button class="options_modal">
+                    <img src="../../../assets/icons/printer.svg"> Label
+                </button>
+            </div>
+            <div fxFlex="20%">
+                <button class="options_modal" style="width: 140px;">
+                    <img src="../../../assets/icons/requote.svg"> Re-Quote
+                </button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+            <div fxFlex="100%">
+                <div fxLayout="20%" fxLayoutGap="0.5%">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+        <div fxFlex="30%">
+            <div fxLayout="column" fxLayoutGap="2%" style="margin-left: 5px;">
+                <div><img src="../../../../assets/icons/info.svg"><b>General Info.</b></div>
+                <div><b>Shipment ID:</b></div>
+                <div>6664/Rated</div>
+                <div><b>Create by:</b></div>
+                <div>test@leantech.com</div>
+                <div><b>Create date:</b></div>
+                <div>Mar 22,2020 8:42 AM</div>
+                <div><b>Account:</b> Training</div>
+                <div>Mar 22,2020 8:42 AM</div>
+                <div><b>SubAccount:</b></div>
+                <div>
+                    <mat-form-field class="select_subaccount">
+                        <mat-label matInput style="margin-left: 5px; color:white"> Customer 1</mat-label>
+                        <mat-select>
+                            <mat-option>
+                                1
+                            </mat-option>
+                            <mat-option>
+                                2
+                            </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div><b>Location:</b></div>
+                <div>
+                    <mat-form-field class="select_location">
+                        <mat-label matInput style="margin-left: 5px; color:white"> Customer 1</mat-label>
+                        <mat-select>
+                            <mat-option>
+                                1
+                            </mat-option>
+                            <mat-option>
+                                2
+                            </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+        </div>
+        <div fxFlex="70%">
+            <mat-card style="height: 90%; width: 92%; overflow-x: hidden; overflow:hidden;">
+                <mat-tab-group>
+                    <mat-tab style="color:black" label="Shipper">
+                        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxFlex="70%">
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxFlex="80%">
+                                <div fxLayout="column" fxLayoutGap="10px">
+                                    <label><b>Company Name</b></label>
+                                    <label><b>Address</b></label>
+                                    <label><b>Address 2</b></label>
+                                    <label><b>Zip Code</b></label>
+                                    <label><b>City</b></label>
+                                    <div><b>State</b></div>
+                                </div>
+                                <div fxLayout="column" fxLayoutGap="10px">
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                </div>
+                            </div>
+
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxFlex="20%">
+                                <div fxLayout="column" fxLayoutGap="10px">
+                                    <label><b>Country</b></label>
+                                    <label><b>Contact</b></label>
+                                    <label><b>Phone</b></label>
+                                    <label><b>Fax</b></label>
+                                    <label><b>email</b></label>
+                                    <label><b>Location</b></label>
+                                </div>
+                                <div fxLayout="column" fxLayoutGap="10px">
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                    <div><input type="input"></div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+                            <div>
+                                <div>
+                                    <b>Comments</b>
+                                </div>
+                                <div>
+                                    <textarea resize="none" cols="58" rows="5"></textarea>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Second" [disabled]="true"> No data</mat-tab>
+                    <mat-tab label="Third" [disabled]="true"> No data </mat-tab>
+                </mat-tab-group>
+            </mat-card>
+
+        </div>
+
+    </div>
+    <div>
+        <button class="options_modal" style="margin-left: 80%; margin-top:10px; width: 150px; height: 40px;">
+            Save
+        </button>
+    </div>
+    <hr>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+        <div fxFlex="70%"><img style="width: 30px; height: 30px;" src="../../../../assets/icons/rate.svg" /><b> Rates</b></div>
+        <div fxFlex="30%"> <button s class="options_modal" style="width: 150px; height: 40px; margin-left: 34%;">
+                <img src="../../../assets/icons/requote.svg"> Re-Quote
+            </button></div>
+    </div>
+</div>
+<br>
+
+<div  >
+    <table mat-table [dataSource]="dataSource">
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> Rate Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Carrier </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> Service Type</th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> SCAC</th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="serviceDays">
+            <th mat-header-cell *matHeaderCellDef> Service Days</th>
+            <td mat-cell *matCellDef="let element"> {{element.serviceDays}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="carrierRate">
+            <th mat-header-cell *matHeaderCellDef> Carrier Rate</th>
+            <td mat-cell *matCellDef="let element"> {{element.carrierRate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="carrierRateTotal">
+            <th mat-header-cell *matHeaderCellDef> Carrier Rate</th>
+            <td mat-cell *matCellDef="let element"> {{element.carrierRateTotal}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="carrierQuote">
+            <th mat-header-cell *matHeaderCellDef> carrierQuote ID</th>
+            <td mat-cell *matCellDef="let element"> {{element.carrierQuote}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Actions</th>
+            <td mat-cell *matCellDef="let element"> {{element.actions}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+<hr>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+    <div fxFlex="30%"><b>Carrier Total</b>: $203.06</div>
+    <div fxFlex="70%"> <b>Customer Total</b>: $263.98</div>
+</div>
+</div>

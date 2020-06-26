@@ -1,0 +1,166 @@
+@import './breakpoints';
+@import './theme';
+
+.mat-sidenav {
+  width: 270px;
+}
+.mat-sidenav-container {
+  background-color: white !important;
+  height: 100vh;
+
+  .mat-sidenav-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.sidenav-toolbar {
+  height: 64px;
+  background-color: mat-color($app-primary);
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 600px) {
+    height: 56px;
+  }
+}
+.mat-nav-list {
+  padding-top: 0;
+}
+@include breakpoint-max(600px) {
+  .fixed-topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100% !important;
+  }
+
+  .mat-drawer-container,
+  .mat-drawer {
+    padding-top: 56px;
+  }
+}
+.menu-list-item.mat-list-item {
+  .mat-list-item-content {
+    flex: 1 1 100%;
+  }
+}
+.version-info {
+  font-size: 8pt;
+  padding: 8px;
+  align-self: flex-end;
+}
+
+.mat-list-base .mat-list-item {
+  color: #1E3953 !important;
+}
+
+.container {
+  margin: 10px,10px,10px,10px;
+}
+
+
+
+.mat-form-field-infix {
+  position: initial !important;
+  flex: auto;
+  width: 180px;
+  margin-right: 10px;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0 !important;
+}
+
+.mat-select-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+  margin: 0 4px;
+  /* background: red; */
+  color: gainsboro !important ;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #273b52;
+}
+
+
+
+.mat-select-arrow-wrapper {
+  display: table-cell;
+  vertical-align: top !important;
+  color: gainsboro !important;
+}
+
+.mat-card_style[_ngcontent-fjp-c163] {
+  box-shadow: 0px 18px 44px 0px #b0b0b0;
+  border-radius: 5px;
+  height: 0;
+  /* width: 92%; */
+  margin: 25px;
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+  line-height: 0px !important;
+  padding: 0 12px;
+}
+
+
+.mat-dialog-container {
+  width: 100%;
+  background: white;
+}
+
+.mat-tab-body-content {
+  height: 100%;
+  overflow: hidden !important;
+}
+
+
+
+
+.mat-tab-label, .mat-tab-link {
+  color: black;
+  font-weight: bold;
+}
+
+
+
+.container::-webkit-scrollbar {
+  width: 8px;     /* Tamaño del scroll en vertical */
+  height: 8px;    /* Tamaño del scroll en horizontal */
+  display: none;  /* Ocultar scroll */
+}
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.container::-webkit-scrollbar-thumb:active {
+  background-color: #cf1111;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.container::-webkit-scrollbar-track {
+  background: #eb1b1b;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+.container::-webkit-scrollbar-track:hover,
+.container::-webkit-scrollbar-track:active {
+background: #a31d1d;
+}

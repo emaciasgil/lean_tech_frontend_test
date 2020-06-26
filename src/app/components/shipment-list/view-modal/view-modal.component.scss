@@ -1,0 +1,138 @@
+.options_modal{
+    background-color: #273b52;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
+  -moz-box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
+  box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
+  background-color: #1e3953;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px; 
+  border-color: #1e3953;
+  width: 100px;
+  size: 5px;
+  margin-left: 10px;
+  margin-top: 0px;
+  color:#ffffff;
+  justify-content: flex-start;
+  }
+
+    
+.select1{
+  background:#273b52;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  width: 160px;
+  height: 30px;
+  text-align: center;
+  color:white !important;
+}
+
+.select_subaccount{
+  background:#273b52;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  color:white !important;
+}
+
+.select_location{
+  background:#273b52;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  color:white !important;
+}
+
+
+
+.select2{
+  background:#273b52;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  width: 160px;
+  height: 30px;
+  text-align: center;
+  color:white;
+}
+
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: whitesmoke;
+  width: 160px;
+}
+input:focus {
+  border-color: #273b52
+}
+
+
+.mat-table {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  width: 100%;
+}
+
+
+
+.scroll-panel{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-left: 0px;
+  height: 67vh;
+  border-right: solid 1px #d8d8d8;
+  @media screen and (max-width: 499px) {
+      height: 53vh;
+  }
+}
+/* width */
+.scroll-panel::-webkit-scrollbar {
+  width: 4px;
+  position: relative;
+  right: -2px;
+}
+/* Track */
+.scroll-panel::-webkit-scrollbar-track {
+  background: white;
+  width: 1px; 
+}
+/* Handle */
+.scroll-panel::-webkit-scrollbar-thumb {
+  background: grey; 
+  border-radius: 3px;
+  position: relative;
+  right: -2px;
+}
+
+
+.close{
+  position: relative;
+  top: -23px;
+  right: -21px;
+  button{
+      .mat-icon{
+          font-size: 20px;
+      }
+      &:focus {
+          outline: none !important;
+      }
+      
+  }
+  
+}
+:host ::ng-deep .mat-button-focus-overlay {
+  background-color: transparent !important;
+}

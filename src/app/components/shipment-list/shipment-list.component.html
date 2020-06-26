@@ -1,0 +1,148 @@
+<div class="container">
+  <div fxFlex="100" fxLayout="wrap-reverse">
+    <div fxFlex="40" fxFlex.xs="70">
+      <h3 style="margin-left: 20px;">Shipment List </h3>
+      <div class="header" fxLayout="column">
+        <div class="header__logo p-16 p-sm-24" fxLayout="row" fxHide.xs fxLayoutAlign="center center">
+        </div>
+        <div class="header__search-input" style="padding-left: 20px;" fxLayout="row" fxLayoutAlign="center center" fxFlex.xs="100" fxFlex="100">
+          <div class="search mat-elevation-z2" fxLayout="row" fxLayoutAlign="start center" xFlex.xs="100">
+            <mat-icon style="color: gray;">search</mat-icon>
+            <input #filter placeholder="Search for a Shipment..." name="term" fxFlex  [(ngModel)]="term"/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div fxFlex="100" fxFlex.xs="70" style="margin-top: 70px;">
+      <mat-form-field class="select1">
+        <mat-label style="margin-left: 5px; ">Status</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let shipment of shipments">
+              {{shipment.customerStatus}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <mat-form-field class="select2">
+        <mat-label style="margin-left: 5px;"> Carrier Status</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let shipment of shipments">
+            {{shipment.customerStatus}}
+          </mat-option>
+         
+        </mat-select>
+      </mat-form-field>
+    
+      <mat-form-field class="select3">
+        <mat-label > Customer Status</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let shipment of shipments">
+            {{shipment.customerStatus}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex="20" fxFlex.xs="70" style="margin-top: 60px;">
+     <button  type="button" class="create_shipment" style="cursor: pointer;">
+       <img src="../../../assets/icons/newshipment.svg"> Create Shipment
+     </button>
+    </div>
+  </div>
+</div>
+
+<!-- filter:filterShipment" -->
+<mat-card *ngFor="let shipment of shipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style" (click)="onCreate()">
+
+  <div fxLayout="row" fxLayoutAlign="">
+    <div fxFlex="90" style="margin-bottom: 10px;">{{shipment.shipmentId}}</div>
+    <div fxFlex="10"><div>{{shipment.createdDate }}<img  style="margin-left: 10px;" width="15px" src="../../../assets/icons/menu.png" alt=""></div></div>
+  </div>
+  
+  <div fxLayout="row">
+    <div fxFlex="10"><b>{{shipment.origin.city}}, {{shipment.origin.state}}</b> <br>
+      {{shipment.createdDate}}
+    </div>
+    <div fxFlex="5">
+      <img width="20px" style="margin-bottom:30px; justify-content: center;;" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Flecha.png" alt="" srcset="">
+    </div>
+    <div fxFlex="10"><b>{{shipment.destination.city}},{{shipment.destination.state}}  </b><br>
+      Feb 20 2019
+    </div>
+    <div fxFlex="10"></div>
+    <div fxFlex="10">
+      <div *ngFor="let track of shipment.trackingDetails">
+        {{track.location}} <br>
+        <img width="13px" src="https://i.ya-webdesign.com/images/pointer-transparent-map-5.png">{{track.status}}
+      </div>
+    </div>
+    <div fxFlex="5">
+    
+    </div>
+
+    <div fxFlex="15">
+      <div *ngFor="let ref of shipment.references">
+        <b>{{ref.name}}</b> <br>
+        {{ref.value}} <br> 
+      </div>
+  
+    </div>
+
+    <!-- onerror="javascript:this.src='' -->
+    <div fxFlex="15">
+      <img width="100px" [src]="shipment.carrier.logoUrl" onerror="javascript:this.src='../../../assets/icons/companynotdata.png'" > <br>
+       {{shipment.companyName}}
+    </div>
+    
+    <div fxFlex="10">Status Carrier
+      <mat-button-toggle style="height: 30px;     line-height: 0px;" value="bold" ><b style="color: blueviolet; margin-top: 0px;">Ready to strap</b></mat-button-toggle>
+    </div>
+    <div fxFlex="10">Status Customer
+      <mat-button-toggle value="bold" style="height: 30px;" ><b style="color: crimson;">{{shipment.customerStatus}}</b></mat-button-toggle>
+
+    </div>
+  </div>
+
+  <div fxLayout="row">
+    <div fxFlex="10">
+      <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+    </div>
+    <div fxFlex="1"> </div>
+    <div fxFlex="10">
+      <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+    </div>
+    <div fxFlex="1"></div>
+    <div fxFlex="10">
+      <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+    </div>
+    <div fxFlex="1"></div>
+    <div fxFlex="10">
+      <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+    </div>
+
+    <div fxFlex="50">
+     
+    </div>
+    <div fxFlex="10">
+      <div *ngFor="let customer of shipment.customerRate">
+        <b>$  {{customer.charge}}</b> <br>
+        {{customer.name}}
+       
+      </div>
+     
+    </div>
+
+    <div fxFlex="10">
+      <div *ngFor="let carrier of shipment.carrierRate">
+        <b>$  {{carrier.charge}} </b> <br>
+        {{carrier.name}}
+      </div>
+     
+    </div>
+
+
+  </div>
+</mat-card>
+        
+<pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
