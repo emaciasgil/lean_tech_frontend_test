@@ -53,7 +53,7 @@
 </div>
 
 <!-- filter:filterShipment" -->
-<mat-card *ngFor="let shipment of shipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style" (click)="onCreate()">
+<mat-card *ngFor="let shipment of shipmentService.shipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style" (click)="onCreate()">
 
   <div fxLayout="row" fxLayoutAlign="">
     <div fxFlex="90" style="margin-bottom: 10px;">{{shipment.shipmentId}}</div>

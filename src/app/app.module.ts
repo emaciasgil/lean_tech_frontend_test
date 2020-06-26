@@ -39,6 +39,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ShipmentsService } from './services/shipment-list/shipments.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -86,7 +87,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
    
   ],
   bootstrap: [AppComponent],
-  providers: [NavService],
+  providers: [NavService, ShipmentsService],
   entryComponents:[
     ViewModalComponent,
     

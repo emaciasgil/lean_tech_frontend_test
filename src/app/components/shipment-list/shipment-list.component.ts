@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http'
 import * as moment from 'moment';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog'
 import { ViewModalComponent } from './view-modal/view-modal.component';
+import { ShipmentsService } from 'src/app/services/shipment-list/shipments.service';
 @Component({
   selector: 'app-shipment-list',
   templateUrl: './shipment-list.component.html',
@@ -16,13 +17,13 @@ export class ShipmentListComponent implements OnInit {
   filterShipment:string;
   term: string;
   readonly ROOT_URL='https://square.lean-tech.io/jsonmock/api/orders/'
-  constructor(private http: HttpClient, private dialog:MatDialog) { 
+  constructor(public shipmentService: ShipmentsService,private http: HttpClient,private dialog:MatDialog) { 
     
-    this.http.get(this.ROOT_URL).subscribe(data=>{
-      this.load=true;
-      this.shipments=data  
-      this.fecha
-    })
+    // this.http.get(this.ROOT_URL).subscribe(data=>{
+    //   this.load=true;
+    //   this.shipments=data  
+    //   this.fecha
+    // }
   }
   
   ngOnInit() {
