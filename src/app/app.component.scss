@@ -84,7 +84,7 @@
 }
 
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-  background-color: #273b52;
+  background-color: #203455;
 }
 
 
@@ -111,7 +111,10 @@
 
 .mat-dialog-container {
   width: 100%;
+  height: 90%;
   background: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .mat-tab-body-content {

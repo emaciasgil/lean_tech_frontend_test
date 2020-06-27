@@ -40,6 +40,12 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ShipmentsService } from './services/shipment-list/shipments.service';
+import {AngularFireDatabaseModule, AngularFireDatabase} from '@angular/fire/database'
+import {environment} from '../enviroments/environment'
+import { AngularFireModule } from '@angular/fire';
+import { TagService } from './services/tags/tag.service';
+import {MatChipsModule} from '@angular/material/chips';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -69,7 +75,11 @@ import { ShipmentsService } from './services/shipment-list/shipments.service';
     MatTabsModule,
     MatTableModule,
     MatPaginatorModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    MatDialogModule,
+    AngularFireDatabaseModule,
+    MatChipsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     
   ],
   declarations: [
@@ -87,9 +97,10 @@ import { ShipmentsService } from './services/shipment-list/shipments.service';
    
   ],
   bootstrap: [AppComponent],
-  providers: [NavService, ShipmentsService],
+  providers: [NavService, ShipmentsService,TagService,AngularFireDatabase],
   entryComponents:[
     ViewModalComponent,
+    MatDialogModule
     
   ]
 })

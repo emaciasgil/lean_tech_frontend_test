@@ -46,14 +46,14 @@
 
     <div fxFlex="20" fxFlex.xs="70" style="margin-top: 60px;">
      <button  type="button" class="create_shipment" style="cursor: pointer;">
-       <img src="../../../assets/icons/newshipment.svg"> Create Shipment
+       <img style="vertical-align: middle;" src="../../../assets/icons/newshipment.svg"> Create Shipment
      </button>
     </div>
   </div>
 </div>
 
 <!-- filter:filterShipment" -->
-<mat-card *ngFor="let shipment of shipmentService.shipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style" (click)="onCreate()">
+<mat-card *ngFor="let shipment of shipmentService.shipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style" (click)="onCreate(shipment)">
 
   <div fxLayout="row" fxLayoutAlign="">
     <div fxFlex="90" style="margin-bottom: 10px;">{{shipment.shipmentId}}</div>
@@ -74,7 +74,7 @@
     <div fxFlex="10">
       <div *ngFor="let track of shipment.trackingDetails">
         {{track.location}} <br>
-        <img width="13px" src="https://i.ya-webdesign.com/images/pointer-transparent-map-5.png">{{track.status}}
+        <img width="20px" style="vertical-align: middle;"  src="../../../assets/icons/pointer.png">{{track.status}}
       </div>
     </div>
     <div fxFlex="5">

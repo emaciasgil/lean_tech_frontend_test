@@ -1,30 +1,44 @@
 .options_modal{
-    background-color: #273b52;
-    border: none;
-    color: white;
+ background-color: #203455;
+ border: none;
+ color: white;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ -webkit-box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
+ -moz-box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
+ box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
+ background-color: #1e3953;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border-radius: 100px; 
+ border-color: #1e3953;
+ width: 100px;
+ size: 5px;
+ margin-left: 10px;
+ margin-top: 0px;
+ color:#ffffff;
+ justify-content: flex-start;
+  
+}
+
+  .send_button{
+    background:#203455;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    width: 160px;
+    height: 30px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    -webkit-box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
-  -moz-box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
-  box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
-  background-color: #1e3953;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px; 
-  border-color: #1e3953;
-  width: 100px;
-  size: 5px;
-  margin-left: 10px;
-  margin-top: 0px;
-  color:#ffffff;
-  justify-content: flex-start;
+    color:white !important;
+    outline: none;
+    margin-left: 75%;
   }
 
     
 .select1{
-  background:#273b52;
+  background:#203455;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
@@ -35,7 +49,7 @@
 }
 
 .select_subaccount{
-  background:#273b52;
+  background:#203455;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
@@ -46,7 +60,7 @@
 }
 
 .select_location{
-  background:#273b52;
+  background:#203455;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
@@ -59,7 +73,7 @@
 
 
 .select2{
-  background:#273b52;
+  background:#203455;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
@@ -77,9 +91,12 @@ input {
   width: 160px;
 }
 input:focus {
-  border-color: #273b52
+  border-color: #203455
 }
 
+.mat-dialog-container{
+  overflow-x: hidden;
+}
 
 .mat-table {
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -92,7 +109,7 @@ input:focus {
   overflow-y: scroll;
   overflow-x: hidden;
   margin-left: 0px;
-  height: 67vh;
+  height: 75vh;
   border-right: solid 1px #d8d8d8;
   @media screen and (max-width: 499px) {
       height: 53vh;
@@ -118,10 +135,12 @@ input:focus {
 }
 
 
+
+
 .close{
   position: relative;
   top: -23px;
-  right: -21px;
+  right: -37px;
   button{
       .mat-icon{
           font-size: 20px;
@@ -135,4 +154,63 @@ input:focus {
 }
 :host ::ng-deep .mat-button-focus-overlay {
   background-color: transparent !important;
+}
+
+th.mat-header-cell {
+  text-align: center !important;
+}
+
+.center_data_table {
+  text-align: center
+}
+
+
+input.mat-chip-input{
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5%;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1.0rem;
+    height: 40px;
+    /* padding: 0 2.5rem 0 4.5rem; */
+    width: 95%;
+    -webkit-box-shadow: 2px 15px 24px 2px rgb(211, 210, 211);
+-moz-box-shadow: 2px 15px 24px 2px rgb(236, 236, 236);
+box-shadow: 2px 15px 24px 2px rgb(228, 227, 228);
+    border: none;
+    outline: none;
+    &::placeholder{
+      color:#d8d8d8 ;      
+      @media (max-width: 500px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  .input-icon{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/leantechproject.appspot.com/o/add.svg?alt=media&token=63c16f19-9f94-434a-8ae2-06658ce42798');
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-size: 20px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    padding-left: 28px;
+    height: 30px;
+    border: 1px solid rgba(9, 113, 163, 1);
+    border-radius: 3px;
+   
+  }
+
+
+  .mat-chip.mat-standard-chip {
+    background-color:203455;
+    color: #ffffff;
+}
+
+.mat-chip.mat-standard-chip .mat-chip-remove {
+  color: white;
+  opacity: 0.4;
 }
