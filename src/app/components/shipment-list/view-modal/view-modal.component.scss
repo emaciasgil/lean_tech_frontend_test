@@ -38,11 +38,18 @@
   size: 5px;
   margin-left: 10px;
   margin-top: 0px;
-  color: #ffffff;
   justify-content: flex-start;
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px rgb(187, 187, 187);
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
+.button-form__modal:hover {
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px #1e3953;
+  transition: all 0.2s ease;
+}
 
 
 .button-form__requote{
@@ -60,9 +67,17 @@
   width: 160px;
   height: 30px;
   text-align: center;
-  color: white !important;
   outline: none;
   margin-left: 75%;
+  color: rgba(255, 255, 255, 1) !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgb(187, 187, 187);
+}
+
+.button-form__save:hover {
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px #1e3953;
+  transition: all 0.2s ease;
 }
 
 // Modal predefined design Scroll

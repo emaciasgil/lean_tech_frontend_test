@@ -156,9 +156,6 @@ body.theme-default .mat-button-focus-overlay:hover {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  -webkit-box-shadow: 24px 24px 177px -23px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 24px 24px 177px -23px rgba(0, 0, 0, 0.75);
-  box-shadow: 24px 24px 177px -23px rgba(0, 0, 0, 0.75);
   background-color: #1e3953;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
@@ -171,7 +168,16 @@ body.theme-default .mat-button-focus-overlay:hover {
   margin-top: 0px;
   color: #ffffff;
   justify-content: flex-start;
+  box-shadow: 0 4px 16px rgb(187, 187, 187);
+  transition: all 0.2s ease;
+
+  
 }
 
+.button-create__shipment:hover {
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px #1e3953;
+  transition: all 0.2s ease;
+}
 
 

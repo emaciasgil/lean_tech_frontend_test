@@ -5,16 +5,17 @@ import { QuotesComponent } from './components/quotes/quotes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { ViewModalComponent } from './components/shipment-list/view-modal/view-modal.component';
+
 
 const routes: Routes = [
-  {path:'dashboard', component: DashboardComponent},
-  {path:'shipment', component: ShipmentListComponent},
-  {path:'quotes', component: QuotesComponent},
-  {path:'invoice', component: InvoiceComponent},
-  {path:'settings', component: SettingsComponent},
-  {path:'viewshipment/:id',component:ViewModalComponent}
-
+  {path:'', component:ShipmentListComponent},
+  {path:'shipment', component: ShipmentListComponent,  pathMatch: 'full'},
+  
+  // Routes not needed at the moment
+  // {path:'dashboard', component: DashboardComponent},
+  // {path:'quotes', component: QuotesComponent},
+  // {path:'invoice', component: InvoiceComponent},
+  // {path:'settings', component: SettingsComponent},
 
 ];
 

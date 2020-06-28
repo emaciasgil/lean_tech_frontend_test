@@ -10,9 +10,9 @@
 
 <!-- Shipment Information -->
   <div>
-    <div>
+    <div class="shipment-information__h3  animate__animated animate__backInLeft animate__delay-0.8s">
       <div>
-        <h3 class="shipment-information__h3"><b>Shipment Information</b></h3>
+        <h3  ><b>Shipment Information</b></h3>
       </div>
       <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
         <div fxFlex="5%">
@@ -20,8 +20,8 @@
         </div>
         <div fxFlex="95%">
           <div fxLayout="column">
-            <div class="item"><b>Shipment Information</b></div>
-            <div class="item">view and update all shipment data, generate pickup request and change shipment
+            <div  ><b>Shipment Information</b></div>
+            <div >view and update all shipment data, generate pickup request and change shipment
               status
             </div>
           </div>
@@ -87,7 +87,7 @@
                     (matChipInputTokenEnd)="add($event)">
                 </div>
                 <div fxFlex="100%">
-                  <mat-chip *ngFor="let shipmentTag of shipments" [selectable]="selectable" [removable]="removable"
+                  <mat-chip class="animate__animated animate__fadeIn  animate__delay-1s" *ngFor="let shipmentTag of shipments" [selectable]="selectable" [removable]="removable"
                     (removed)="remove(shipmentTag)">
                     {{shipmentTag.name}}
                     <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
@@ -138,7 +138,8 @@
         </div>
       </div>
     </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+    
+    <div  class="shipment-information__h3  animate__animated animate__backInRight animate__delay-0.8s" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
       <div fxFlex="30%">
         <div fxLayout="column" fxLayoutGap="2%" style="margin-left: 5px;">
           <div><img style="vertical-align: middle;" src="../../../../assets/icons/info.svg"><b> General Info.</b></div>
@@ -184,7 +185,7 @@
 
       </div>
       <div fxFlex="100%">
-        <mat-card style="height: 90%; width: 92%; overflow-x: hidden; overflow:hidden;">
+        <mat-card class="animate__animated animate__bounceInLeft animate__delay-0.5s" style="height: 90%; width: 92%; overflow-x: hidden; overflow:hidden;">
           <mat-tab-group>
             <mat-tab style="color:black;" label="Shipper">
               <form (ngSubmit)="onSubmit()" fxLayout="column">
@@ -263,8 +264,10 @@
 
     </div>
     <br>
+    
     <hr style="border-bottom-color: rgba(0, 0, 0, 0.12);">
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" style="padding-bottom: 5px;">
+   
+    <div  class="shipment-information__h3  animate__animated animate__backInLeft animate__delay-0.8s" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" style="padding-bottom: 5px;">
       <div fxFlex="70%"><img style="width: 30px; height: 30px; vertical-align: middle;"
           src="../../../../assets/icons/rate.svg" /><b> Rates</b>
       </div>
@@ -340,7 +343,7 @@
 
 <!--Carrier and customer costs-->
   <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" *ngFor="let charge of dataTable">
-      <div fxFlex="30%"><b>Carrier Total:</b>{{totalCarrier | number}}</div>  
-      <div fxFlex="70%"> <b>Customer Total:</b>{{totalCustomer | number}}</div>
+      <div fxFlex="30%"><b>Carrier Total:</b> ${{totalCarrier | number}}</div>  
+      <div fxFlex="70%"> <b>Customer Total:</b> ${{totalCustomer | number}}</div>
   </div>
 </div>

@@ -2,7 +2,7 @@
   <div fxFlex="100" fxLayout="wrap-reverse">
     <div fxFlex="40" fxFlex.xs="70">
       <!-- Shipment List Header -->
-      <h3 style="margin-left: 20px;">Shipment List </h3>
+      <h3 class="animate__animated animate__slideInDown   animate__delay-1s" style="margin-left: 20px;">Shipment List </h3>
       <div class="header" fxLayout="column">
         <div class="header__logo p-16 p-sm-24" fxLayout="row" fxHide.xs fxLayoutAlign="center center">
         </div>
@@ -56,19 +56,19 @@
 </div>
 
 <!-- filter:filterShipment" -->
-<mat-card *ngFor="let shipment of shipmentService.shipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style" (click)="onCreate(shipment)">
+<mat-card  *ngFor="let shipment of shipmentService.shipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style animate__animated animate__backInLeft animate__delay-1s" (click)="onCreate(shipment)">
 
   <div fxLayout="row" fxLayoutAlign="">
     <div fxFlex="90" style="margin-bottom: 10px;">{{shipment.shipmentId}}</div>
-    <div fxFlex="10"><div>{{shipment.createdDate }}<img  style="margin-left: 10px;" width="15px" src="../../../assets/icons/menu.png" alt=""></div></div>
+    <div  fxFlex="10"><div >{{shipment.createdDate }}<img  style="margin-left: 10px;" width="15px" src="../../../assets/icons/menu.png" alt=""></div ></div>
   </div>
   
   <div fxLayout="row">
-    <div fxFlex="10"><b>{{shipment.origin.city}}, {{shipment.origin.state}}</b> <br>
+    <div fxFlex="10" ><b>{{shipment.origin.city}}, {{shipment.origin.state}}</b> <br>
       {{shipment.createdDate}}
     </div>
     <div fxFlex="5">
-      <img width="20px" style="margin-bottom:30px; justify-content: center;;" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Flecha.png" alt="" srcset="">
+      <img width="20px" class=" animate__animated animate__lightSpeedInLeft animate__delay-2s" style="margin-bottom:30px; justify-content: center;" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Flecha.png" alt="" srcset="">
     </div>
     <div fxFlex="10"><b>{{shipment.destination.city}},{{shipment.destination.state}}  </b><br>
       Feb 20 2019
@@ -77,7 +77,7 @@
     <div fxFlex="10">
       <div *ngFor="let track of shipment.trackingDetails">
         {{track.location}} <br>
-        <img width="20px" style="vertical-align: middle;"  src="../../../assets/icons/pointer.png">{{track.status}}
+        <img class="animate__animated animate__bounce animate__delay-2s" width="20px" style="vertical-align: middle;"  src="../../../assets/icons/pointer.png">{{track.status}}
       </div>
     </div>
     <div fxFlex="5">
@@ -109,19 +109,19 @@
 
   <div fxLayout="row">
     <div fxFlex="10">
-      <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+      <mat-progress-bar class="animate__animated animate__backInLeft animate__delay-5s" mode="determinate" value="100"></mat-progress-bar>
     </div>
     <div fxFlex="1"> </div>
     <div fxFlex="10">
-      <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+      <mat-progress-bar class="animate__animated animate__backInLeft animate__delay-4s" mode="determinate" value="100"></mat-progress-bar>
     </div>
     <div fxFlex="1"></div>
     <div fxFlex="10">
-      <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+      <mat-progress-bar class="animate__animated animate__backInLeft animate__delay-3s" mode="determinate" value="100"></mat-progress-bar>
     </div>
     <div fxFlex="1"></div>
     <div fxFlex="10">
-      <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+      <mat-progress-bar class="animate__animated animate__backInLeft animate__delay-2s" mode="determinate" value="0"></mat-progress-bar>
     </div>
 
     <div fxFlex="50">
