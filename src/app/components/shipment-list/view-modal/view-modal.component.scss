@@ -1,120 +1,99 @@
-.options_modal{
- background-color: #203455;
- border: none;
- color: white;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 16px;
- -webkit-box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
- -moz-box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
- box-shadow: 24px 24px 177px -23px rgba(0,0,0,0.75);
- background-color: #1e3953;
- -webkit-border-radius: 100px;
- -moz-border-radius: 100px;
- border-radius: 100px; 
- border-color: #1e3953;
- width: 100px;
- size: 5px;
- margin-left: 10px;
- margin-top: 0px;
- color:#ffffff;
- justify-content: flex-start;
-  
+/* Using the Bem standard (modified block element)*/
+
+/* Style Modal*/
+
+//Shipment Information Style
+
+.shipment-information__h3{
+  margin-left: 10px;
 }
 
-  .send_button{
-    background:#203455;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 100px;
-    width: 160px;
-    height: 30px;
-    text-align: center;
-    color:white !important;
-    outline: none;
-    margin-left: 75%;
-  }
+.shipment-information__icon{
+  width:50px
+}
 
-    
-.select1{
-  background:#203455;
+.padding-top__information{
+  padding-top: 10px;
+}
+
+
+// Modal options
+.button-form__modal {
+  background-color: #203455;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-box-shadow: 24px 24px 177px -23px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 24px 24px 177px -23px rgba(0, 0, 0, 0.75);
+  box-shadow: 24px 24px 177px -23px rgba(0, 0, 0, 0.75);
+  background-color: #1e3953;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
+  border-radius: 100px;
+  border-color: #1e3953;
+  width: 100px;
+  size: 5px;
+  margin-left: 10px;
+  margin-top: 0px;
+  color: #ffffff;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+
+
+.button-form__requote{
+  width: 150px; 
+  height: 40px; margin-left: 35%; border: none; cursor: pointer;
+}
+
+.button-form__modal-clear{
+  margin-left: 94%;
+}
+// Send button style
+.button-form__save {
+  background: #203455;
   border-radius: 100px;
   width: 160px;
   height: 30px;
   text-align: center;
-  color:white !important;
+  color: white !important;
+  outline: none;
+  margin-left: 75%;
 }
 
-.select_subaccount{
-  background:#203455;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  width: 200px;
-  height: 30px;
-  text-align: center;
-  color:white !important;
-}
-
-.select_location{
-  background:#203455;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  width: 200px;
-  height: 30px;
-  text-align: center;
-  color:white !important;
-}
-
-
-
-.select2{
-  background:#203455;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  width: 160px;
-  height: 30px;
-  text-align: center;
-  color:white;
-}
-
-
-input {
-  outline: 0;
-  border-width: 0 0 2px;
-  border-color: whitesmoke;
-  width: 160px;
-}
-input:focus {
-  border-color: #203455
-}
-
-.mat-dialog-container{
+// Modal predefined design Scroll
+.mat-dialog-container {
   overflow-x: hidden;
 }
 
-.mat-table {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  width: 100%;
+
+//  Mat-label Request
+.pickup-request__mat-label{
+  margin-left: 5px; 
+  color: white;
 }
 
+.rated_mat-label{
+  margin-left: 5px; 
+  color:white
+}
 
-
-.scroll-panel{
+// Modal scroll styles
+.scroll-panel {
   overflow-y: scroll;
   overflow-x: hidden;
   margin-left: 0px;
   height: 75vh;
   border-right: solid 1px #d8d8d8;
   @media screen and (max-width: 499px) {
-      height: 53vh;
+    height: 53vh;
   }
 }
+
 /* width */
 .scroll-panel::-webkit-scrollbar {
   width: 4px;
@@ -124,93 +103,185 @@ input:focus {
 /* Track */
 .scroll-panel::-webkit-scrollbar-track {
   background: white;
-  width: 1px; 
+  width: 1px;
 }
 /* Handle */
 .scroll-panel::-webkit-scrollbar-thumb {
-  background: grey; 
+  background: grey;
   border-radius: 3px;
   position: relative;
   right: -2px;
 }
 
-
-
-
-.close{
+//Close Modal
+.close {
   position: relative;
   top: -23px;
   right: -37px;
-  button{
-      .mat-icon{
-          font-size: 20px;
-      }
-      &:focus {
-          outline: none !important;
-      }
-      
+  button {
+    .mat-icon {
+      font-size: 20px;
+    }
+    &:focus {
+      outline: none !important;
+    }
   }
-  
 }
 :host ::ng-deep .mat-button-focus-overlay {
   background-color: transparent !important;
 }
 
+//Select Pickup
+.select-pickup {
+  background: #203455;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  width: 160px;
+  height: 30px;
+  text-align: center;
+  color: white !important;
+}
+
+//Select Account
+.select-subaccount {
+  background: #203455;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  color: white !important;
+}
+
+//Select Location
+.select-location {
+  background: #203455;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  color: white !important;
+}
+
+//Select Rated
+.select-rated {
+  background: #203455;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  width: 160px;
+  height: 30px;
+  text-align: center;
+  color: white;
+}
+
+//  Predefined inputs design
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: whitesmoke;
+  width: 160px;
+}
+
+input:focus {
+  border-color: #203455;
+}
+
+/* Style Table*/
+
+// Table predefined design
+.mat-table {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  width: 100%;
+}
+//Table Header Cell align
 th.mat-header-cell {
   text-align: center !important;
 }
 
+// Center table items
 .center_data_table {
-  text-align: center
+  text-align: center;
 }
 
 
-input.mat-chip-input{
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5%;
-    box-sizing: border-box;
-    display: block;
-    font-size: 1.0rem;
-    height: 40px;
-    /* padding: 0 2.5rem 0 4.5rem; */
-    width: 95%;
-    -webkit-box-shadow: 2px 15px 24px 2px rgb(211, 210, 211);
--moz-box-shadow: 2px 15px 24px 2px rgb(236, 236, 236);
-box-shadow: 2px 15px 24px 2px rgb(228, 227, 228);
-    border: none;
-    outline: none;
-    &::placeholder{
-      color:#d8d8d8 ;      
-      @media (max-width: 500px) {
-        font-size: 12px;
-      }
+
+
+input.mat-chip-input {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5%;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1rem;
+  height: 40px;
+  width: 95%;
+  -webkit-box-shadow: 2px 15px 24px 2px rgb(211, 210, 211);
+  -moz-box-shadow: 2px 15px 24px 2px rgb(236, 236, 236);
+  box-shadow: 2px 15px 24px 2px rgb(228, 227, 228);
+  border: none;
+  outline: none;
+  &::placeholder {
+    color: #d8d8d8;
+    @media (max-width: 500px) {
+      font-size: 12px;
     }
   }
+}
 
+// Chips Style
+.input-icon {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/leantechproject.appspot.com/o/add.svg?alt=media&token=63c16f19-9f94-434a-8ae2-06658ce42798");
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 20px;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  padding-left: 28px;
+  height: 30px;
+  border: 1px solid rgba(9, 113, 163, 1);
+  border-radius: 3px;
+}
 
-  .input-icon{
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/leantechproject.appspot.com/o/add.svg?alt=media&token=63c16f19-9f94-434a-8ae2-06658ce42798');
-    background-repeat: no-repeat;
-    background-position: 4px center;
-    background-size: 20px;
-    display: flex;
-    align-items: center;
-    width: 300px;
-    padding-left: 28px;
-    height: 30px;
-    border: 1px solid rgba(9, 113, 163, 1);
-    border-radius: 3px;
-   
-  }
-
-
-  .mat-chip.mat-standard-chip {
-    background-color:203455;
-    color: #ffffff;
+.mat-chip.mat-standard-chip {
+  background-color: 203455;
+  color: #ffffff;
 }
 
 .mat-chip.mat-standard-chip .mat-chip-remove {
   color: white;
   opacity: 0.4;
+}
+
+.chip__mat-label{
+  padding-left: 100px;
+}
+
+//Text Area
+.text-area__comments{
+  background-color: #ffffff;
+  width: 97%;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1rem;
+  -webkit-box-shadow: -9px -6px 79px -42px rgba(0,0,0,0.53);
+  -moz-box-shadow: -9px -6px 79px -42px rgba(0,0,0,0.53);
+  box-shadow: -9px -6px 79px -42px rgba(36, 28, 28, 0.53);
+  outline: none;
+  border-radius: 5px;
+  border-color: whitesmoke;
+  
+
+}
+.general-info__mergin-left{
+  margin-left: 5px;
+}
+
+.options__margin-bottom{
+  margin-bottom: 30px;
 }

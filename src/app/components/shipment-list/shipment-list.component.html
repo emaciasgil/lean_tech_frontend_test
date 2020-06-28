@@ -1,10 +1,12 @@
 <div class="container">
   <div fxFlex="100" fxLayout="wrap-reverse">
     <div fxFlex="40" fxFlex.xs="70">
+      <!-- Shipment List Header -->
       <h3 style="margin-left: 20px;">Shipment List </h3>
       <div class="header" fxLayout="column">
         <div class="header__logo p-16 p-sm-24" fxLayout="row" fxHide.xs fxLayoutAlign="center center">
         </div>
+        <!-- Header Search Input -->
         <div class="header__search-input" style="padding-left: 20px;" fxLayout="row" fxLayoutAlign="center center" fxFlex.xs="100" fxFlex="100">
           <div class="search mat-elevation-z2" fxLayout="row" fxLayoutAlign="start center" xFlex.xs="100">
             <mat-icon style="color: gray;">search</mat-icon>
@@ -15,29 +17,30 @@
       </div>
     </div>
     <div fxFlex="100" fxFlex.xs="70" style="margin-top: 70px;">
-      <mat-form-field class="select1">
+      <mat-form-field class="select-status">
+        <!-- Select Status -->
         <mat-label style="margin-left: 5px; ">Status</mat-label>
         <mat-select >
-          <mat-option *ngFor="let shipment of shipments">
+          <mat-option *ngFor="let shipment of shipmentService.shipments ">
               {{shipment.customerStatus}}
           </mat-option>
         </mat-select>
       </mat-form-field>
     
-      <mat-form-field class="select2">
+      <!-- Select Status Customer -->
+      <mat-form-field class="select-carrrier__status">
         <mat-label style="margin-left: 5px;"> Carrier Status</mat-label>
         <mat-select >
-          <mat-option *ngFor="let shipment of shipments">
+          <mat-option *ngFor="let shipment of shipmentService.shipments ">
             {{shipment.customerStatus}}
           </mat-option>
-         
         </mat-select>
       </mat-form-field>
     
-      <mat-form-field class="select3">
+      <mat-form-field class="select-customer__status">
         <mat-label > Customer Status</mat-label>
         <mat-select >
-          <mat-option *ngFor="let shipment of shipments">
+          <mat-option *ngFor="let shipment of shipmentService.shipments ">
             {{shipment.customerStatus}}
           </mat-option>
         </mat-select>
@@ -45,7 +48,7 @@
     </div>
 
     <div fxFlex="20" fxFlex.xs="70" style="margin-top: 60px;">
-     <button  type="button" class="create_shipment" style="cursor: pointer;">
+     <button  type="button" class="button-create__shipment" style="cursor: pointer;">
        <img style="vertical-align: middle;" src="../../../assets/icons/newshipment.svg"> Create Shipment
      </button>
     </div>

@@ -167,3 +167,11 @@
 .container::-webkit-scrollbar-track:active {
 background: #a31d1d;
 }
+
+
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: #203455 !important;
+  color: #fefefe;
+  cursor: default;
+}

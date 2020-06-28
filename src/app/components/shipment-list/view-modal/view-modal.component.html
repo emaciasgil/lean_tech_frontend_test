@@ -1,17 +1,22 @@
+<!-- Close Modal -->
 <div class="close">
-  <button (click)="onNoClickClose()" mat-icon-button type="button" style="margin-left: 94%;">
+  <button (click)="onNoClickClose()" mat-icon-button type="button" class="button-form__modal-clear">
     <mat-icon>clear</mat-icon>
   </button>
 </div>
+
+<!-- Scroll Panel -->
 <div class="scroll-panel" infiniteScroll [infiniteScrollDistance]="1" [scrollWindow]="false">
+
+<!-- Shipment Information -->
   <div>
     <div>
       <div>
-        <h3 style="margin-left: 10px;"><b>Shipment Information</b></h3>
+        <h3 class="shipment-information__h3"><b>Shipment Information</b></h3>
       </div>
       <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
         <div fxFlex="5%">
-          <img width="50px" src="../../../../assets/icons/shipment info.svg" alt="" srcset="">
+          <img class="shipment-information__icon" src="../../../../assets/icons/shipment info.svg" alt="" srcset="">
         </div>
         <div fxFlex="95%">
           <div fxLayout="column">
@@ -25,30 +30,25 @@
 
 
       <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="20%" fxLayoutAlign="center">
-        <div fxFlex="50%" style="padding-top: 10px;">
+        <div fxFlex="50%" class="padding-top__information">
           <b>Actions</b> <br>
           <div fxLayout="column">
             <div>Change shipment status and save</div>
           </div>
-
         </div>
-        <div fxFlex="50%" style="padding-top: 10px;">
+        <div fxFlex="50%" class="padding-top__information">
           <b>Shipment Tags</b><br>
           <div fxLayout="column">
             <div>Set smart tag for shipments and make them searchable</div>
           </div>
-
         </div>
-
-
       </div>
 
       <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
         <div fxFlex="100%">
-          <div fxLayout="20%"  style="padding-top: 10px;">
-            <mat-form-field class="select1">
-              <mat-label matInput style="margin-left: 5px; color: white;"> Pickup Request</mat-label>
-
+          <div fxLayout="20%" class="padding-top__information">
+            <mat-form-field class="select-pickup">
+              <mat-label matInput class="pickup-request__mat-label" > Pickup Request</mat-label>
               <mat-select>
                 <mat-option>
                   Customer 1
@@ -56,14 +56,13 @@
                 <mat-option>
                   Customer 2
                 </mat-option>
-
               </mat-select>
             </mat-form-field>
 
 
             <div fxLayout="20%" fxLayoutGap="20%">
-              <mat-form-field class="select2">
-                <mat-label matInput style="margin-left: 5px; color:white"> Rated</mat-label>
+              <mat-form-field class="select-rated">
+                <mat-label matInput class="rated_mat-label"> Rated</mat-label>
                 <mat-select>
                   <mat-option>
                     Customer1
@@ -78,27 +77,25 @@
           </div>
         </div>
         <div fxFlex="50%">
-          <div fxLayout="column" fxLayoutGap="20%" style="padding-left: 100px;" >
-              <mat-form-field class="example-chip-list">
-                <mat-chip-list #chipList aria-label="Fruit selection">
-                       <div fxFlex="100%" >
-                         
-                       <input placeholder=""  class="input-icon"
-                         [matChipInputFor]="chipList"
-                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                         [matChipInputAddOnBlur]="addOnBlur"
-                         (matChipInputTokenEnd)="add($event)">
-                        </div>
-                        <div fxFlex="100%">
-                          <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
-                          [removable]="removable" (removed)="remove(fruit)">
-                          {{fruit.name}}
-                           <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-                 </mat-chip>
-                        </div>
-                    
-                </mat-chip-list>
-              </mat-form-field>
+          <div fxLayout="column" fxLayoutGap="20%" class="chip__mat-label">
+            <mat-form-field class="example-chip-list">
+              <mat-chip-list #chipList aria-label="Fruit selection">
+                <div fxFlex="100%">
+
+                  <input placeholder="" class="input-icon" [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)">
+                </div>
+                <div fxFlex="100%">
+                  <mat-chip *ngFor="let shipmentTag of shipments" [selectable]="selectable" [removable]="removable"
+                    (removed)="remove(shipmentTag)">
+                    {{shipmentTag.name}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                </div>
+
+              </mat-chip-list>
+            </mat-form-field>
 
           </div>
 
@@ -108,25 +105,25 @@
       </div>
 
       <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
-        <div fxFlex="30%" style="margin-bottom: 30px;">
+        <div fxFlex="30%" class="options__margin-bottom" >
           <b>More Options</b> <br>
           <div fxLayout="column">
             Print Bol, Invoice, labels,requote and more.
           </div>
         </div>
         <div fxFlex="15%">
-          <button class="options_modal" style="width: 140px; height: 30px;" >
+          <button class="button-form__modal" style="width: 140px; height: 30px;">
             <img style="vertical-align: middle;" src="../../../assets/icons/bol.svg"> Bol
           </button>
         </div>
         <div fxFlex="15%">
-          <button class="options_modal" style="width: 140px; height: 30px;">
+          <button class="button-form__modal" style="width: 140px; height: 30px;">
             <img style="vertical-align: middle;" src="../../../assets/icons/printer.svg"> Label
           </button>
         </div>
         <div fxFlex="70%">
-          <button class="options_modal" style="width: 140px; height: 30px;">
-            <img  style="vertical-align: middle;" src="../../../assets/icons/requote.svg"> Re-Quote
+          <button class="button-form__modal" style="width: 140px; height: 30px;">
+            <img style="vertical-align: middle;" src="../../../assets/icons/requote.svg"> Re-Quote
           </button>
         </div>
       </div>
@@ -144,7 +141,7 @@
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
       <div fxFlex="30%">
         <div fxLayout="column" fxLayoutGap="2%" style="margin-left: 5px;">
-          <div><img  style="vertical-align: middle;" src="../../../../assets/icons/info.svg"><b> General Info.</b></div>
+          <div><img style="vertical-align: middle;" src="../../../../assets/icons/info.svg"><b> General Info.</b></div>
           <div><b>Shipment ID:</b></div>
           <div>{{shipmentData.shipmentId}}/Rated</div>
           <div><b>Create by:</b></div>
@@ -154,7 +151,7 @@
           <div><b>Account:</b> Training</div>
           <div><b>SubAccount:</b></div>
           <div>
-            <mat-form-field class="select_subaccount">
+            <mat-form-field class="select-subaccount">
               <mat-label matInput style="margin-left: 5px; color:white"> Customer 1</mat-label>
               <mat-select>
                 <mat-option>
@@ -169,7 +166,7 @@
           </div>
           <div><b>Location:</b></div>
           <div>
-            <mat-form-field class="select_location">
+            <mat-form-field class="select-location">
               <mat-label matInput style="margin-left: 5px; color:white"> Customer 1</mat-label>
               <mat-select>
                 <mat-option>
@@ -192,7 +189,7 @@
             <mat-tab style="color:black;" label="Shipper">
               <form (ngSubmit)="onSubmit()" fxLayout="column">
                 <div fxLayout="row" fxLayout.xs="row" fxLayoutGap="10%" fxFlex="100%" style="padding-top: 10px;">
-                  <div fxLayout="row" >
+                  <div fxLayout="row">
                     <div fxLayout="column">
                       <label for="companyName"><b>Company Name</b></label>
                       <label for="address"><b>Address</b></label>
@@ -203,13 +200,16 @@
                     </div>
                     <div fxLayout="column">
 
-                      <div><input autocomplete="off" type="text" id="companyName" name="companyName" [(ngModel)]="companyName"></div>
-                      <div><input autocomplete="off" type="text" id="address" name="address"[(ngModel)]="address" ></div>
-                      <div><input name="address2" type="text" id="address2"
-                        [(ngModel)]="address2" ></div>
-                      <div><input autocomplete="off" type="text" name="zipCode" id="zipCode" [(ngModel)]="zipCode"></div>
+                      <div><input autocomplete="off" type="text" id="companyName" name="companyName"
+                          [(ngModel)]="companyName"></div>
+                      <div><input autocomplete="off" type="text" id="address" name="address" [(ngModel)]="address">
+                      </div>
+                      <div><input name="address2" type="text" id="address2" [(ngModel)]="address2"></div>
+                      <div><input autocomplete="off" type="text" name="zipCode" id="zipCode" [(ngModel)]="zipCode">
+                      </div>
                       <div><input autocomplete="off" type="text" name="city" id="city" [(ngModel)]="city"></div>
-                      <div><input autocomplete="off" type="text" name="state" id="state" [(ngModel)]="state" style="padding-top: 2px;"></div>
+                      <div><input autocomplete="off" type="text" name="state" id="state" [(ngModel)]="state"
+                          style="padding-top: 2px;"></div>
 
                     </div>
                   </div>
@@ -224,30 +224,33 @@
                       <label for="location"><b>Location</b></label>
                     </div>
                     <div fxLayout="column">
-                      <div><input autocomplete="off" type="input" id="country" name="country" [(ngModel)]="country"></div>
-                      <div><input autocomplete="off" type="input" id="contact" name="contact" [(ngModel)]="contact"></div>
-                      <div><input autocomplete="off" type="input" id="phone"  name="phone" [(ngModel)]="phone"></div>
-                      <div><input autocomplete="off" type="input" id="fax"  name="fax"[(ngModel)]="fax"></div>
+                      <div><input autocomplete="off" type="input" id="country" name="country" [(ngModel)]="country">
+                      </div>
+                      <div><input autocomplete="off" type="input" id="contact" name="contact" [(ngModel)]="contact">
+                      </div>
+                      <div><input autocomplete="off" type="input" id="phone" name="phone" [(ngModel)]="phone"></div>
+                      <div><input autocomplete="off" type="input" id="fax" name="fax" [(ngModel)]="fax"></div>
                       <div><input type="input" id="email" name="email" [(ngModel)]="email"></div>
-                      <div><input autocomplete="off" type="input" id="location" name="location" [(ngModel)]="location"></div>
+                      <div><input autocomplete="off" type="input" id="location" name="location" [(ngModel)]="location">
+                      </div>
                     </div>
-                    
+
                   </div>
                 </div>
 
                 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxFlex="100%">
                   <div>
-                    <div  style="padding-top: 10px;">
+                    <div style="padding-top: 10px;">
                       <b>Comments</b>
                     </div>
                     <div style="padding-bottom: 10px;">
-                      <textarea name="comments" [(ngModel)]='comments' resize="none" cols="80" rows="5"></textarea>
+                      <textarea  class="text-area__comments" name="comments" [(ngModel)]='comments' resize="none" cols="70" rows="5"></textarea>
                     </div>
-  
+
                   </div>
-  
+
                 </div>
-                <div> <button class="send_button"  type="submit"> Save</button></div>
+                <div> <button class="button-form__save" type="submit"> Save</button></div>
               </form>
 
             </mat-tab>
@@ -259,18 +262,21 @@
       </div>
 
     </div>
-     <br>
+    <br>
     <hr style="border-bottom-color: rgba(0, 0, 0, 0.12);">
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" style="padding-bottom: 5px;">
-      <div fxFlex="70%"><img style="width: 30px; height: 30px; vertical-align: middle;" src="../../../../assets/icons/rate.svg"  /><b> Rates</b>
+      <div fxFlex="70%"><img style="width: 30px; height: 30px; vertical-align: middle;"
+          src="../../../../assets/icons/rate.svg" /><b> Rates</b>
       </div>
-      <div fxFlex="30%"> <button class="options_modal" style="width: 150px; height: 40px; margin-left: 35%; border: none; cursor: pointer;">
+      <div fxFlex="30%"> <button class="button-form__modal"
+          style="width: 150px; height: 40px; margin-left: 35%; border: none; cursor: pointer;">
           <img style="vertical-align: middle;" src="../../../assets/icons/requote.svg"> Re-Quote
         </button></div>
     </div>
   </div>
   <br>
-
+  
+<!-- Table Modal -->
   <div>
     <table mat-table [dataSource]="dataTable">
       <!-- Position Column -->
@@ -304,22 +310,23 @@
 
       <ng-container matColumnDef="carrierRate">
         <th mat-header-cell *matHeaderCellDef> Carrier Rate</th>
-        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.serviceDays}} </td>
+        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.carrierRate[0].charge}} </td>
       </ng-container>
 
       <ng-container matColumnDef="carrierRateTotal">
         <th mat-header-cell *matHeaderCellDef> Carrier Rate</th>
-        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.serviceDays}} </td>
+        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.carrierRate[1].charge}} </td>
       </ng-container>
 
       <ng-container matColumnDef="carrierQuote">
         <th mat-header-cell *matHeaderCellDef> Carrier Quote ID</th>
-        <td class="center_data_table" mat-cell *matCellDef="let element"> <img with="30px" height="30px" src="../../../../assets/icons/download.svg"/> </td>
+        <td class="center_data_table" mat-cell *matCellDef="let element"> <img with="30px" height="30px"
+            src="../../../../assets/icons/download.svg" /> </td>
       </ng-container>
 
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef>Actions</th>
-        <td  class="center_data_table" mat-cell *matCellDef="let element"> <input type="checkbox" name="" id=""> </td>
+        <td class="center_data_table" mat-cell *matCellDef="let element"> <input type="checkbox" name="" id=""> </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -330,8 +337,10 @@
   </div>
 
   <hr>
-  <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
-    <div fxFlex="30%"><b>Carrier Total</b>: $203.06</div>
-    <div fxFlex="70%"> <b>Customer Total</b>: $263.98</div>
+
+<!--Carrier and customer costs-->
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" *ngFor="let charge of dataTable">
+      <div fxFlex="30%"><b>Carrier Total:</b>{{totalCarrier | number}}</div>  
+      <div fxFlex="70%"> <b>Customer Total:</b>{{totalCustomer | number}}</div>
   </div>
 </div>

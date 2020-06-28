@@ -11,6 +11,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./shipment-list.component.scss']
 })
 export class ShipmentListComponent implements OnInit {
+  carrierRate:number;
+  shipmentTotal:any=[];
+  totalCarrier:number;
+  totalCustomer:number;
+  customerRate:number;
+  carrierRateTotal:number;
+  customerRateTotal:number;
   shipments:any={}
   load:boolean=false;
   fecha:any={}
@@ -18,18 +25,33 @@ export class ShipmentListComponent implements OnInit {
   filterShipment:string;
   term: string;
   id:string;
+
+  chargeTotal:any={}
   readonly ROOT_URL='https://square.lean-tech.io/jsonmock/api/orders/'
   constructor(public shipmentService: ShipmentsService,private http: HttpClient, @Optional()  public dialog:MatDialog, @Optional() @Inject(MAT_DIALOG_DATA) public data,  private _routing: Router) { 
-    
-    // this.http.get(this.ROOT_URL).subscribe(data=>{
-    //   this.load=true;
-    //   this.shipments=data  
-    //   this.fecha
-    // }
+ 
+  this.totalCarrier= this.shipmentTotal.reduce((
+    acc,
+    obj,
+  ) => (parseFloat(obj.carrierRate[0].charge) + parseFloat(obj.carrierRate[1].charge)),
+  0);
+
+
+  this.totalCustomer= this.shipmentTotal.reduce((
+    acc,
+    obj,
+  ) => (parseFloat(obj.customerRate[0].charge) + parseFloat(obj.customerRate[1].charge)),
+  0);
+  
+  
+
   }
   
   ngOnInit() {
+   this.shipmentService.getShipmentsCharge().subscribe(result=>(this.shipmentTotal=result))
   }
+
+
 
   formatDate(date) {
     return moment(date).utc().format('YYYY-MM-DD');

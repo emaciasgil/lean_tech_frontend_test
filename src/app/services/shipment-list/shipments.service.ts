@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ShipmentInterface } from 'src/app/interfaces/shipments.interface';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,10 @@ export class ShipmentsService {
       this.shipments=data;
       console.log(data);
     })
+   }
+
+   getShipmentsCharge(){
+       return this.http.get<ShipmentInterface[]>(this.ROOT_URL)
    }
   
 }
