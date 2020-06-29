@@ -4,10 +4,82 @@
 
 //Shipment Information Style
 
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .shipment-information__h3{
+    margin-left: 0px !important;
+  }
+  .scroll-panel{
+    margin-left: 30px !important;
+  }
+
+  .shipment-information__icon{
+    width: 10px !important;
+  }
+  .padding-top__information{
+    margin-bottom: 2px !important;
+    display: block !important;
+  }
+  .select-pickup{
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+
+  .select-rated {
+    width: 100% !important;
+  }
+  .mat-paginator__modal{
+    display: none;
+  }
+
+  .button-form__requote-flex{
+    display: none;
+  }
+
+  
+
+
+  .chip__mat-label{
+    padding-left: 0px !important;
+  }
+  .scroll-panel{
+    height: 85% !important;
+    width: 100% !important;
+}
+.spacing-print{
+  flex-wrap: wrap !important;
+}
+
+.more-options__flex{
+  display: none !important;
+}
+.button-form__save{
+  margin-left: 35% !important
+}
+.shipment-information__requote {
+  max-width: 50% !important;
+}
+
+.button-form_requote{
+
+  margin-left: 0px !important;
+  width: 100% !important;
+}
+
+.shipment_information__flex{
+
+}
+
+
+}
+
+
+
 .shipment-information__h3{
   margin-left: 10px;
 }
-
+.shipment-information__rates{
+  width: 30px; height: 30px; vertical-align: middle;
+}
 .shipment-information__icon{
   width:50px
 }
@@ -43,6 +115,7 @@
   box-shadow: 0 4px 16px rgb(187, 187, 187);
   transition: all 0.2s ease;
   cursor: pointer;
+  
 }
 
 .button-form__modal:hover {

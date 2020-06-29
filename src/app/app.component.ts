@@ -2,8 +2,9 @@ import {Component, ViewChild, ElementRef, ViewEncapsulation, AfterViewInit, OnIn
 import {VERSION} from '@angular/material/core';
 import {NavItem} from './nav-item';
 import {NavService} from './nav.service';
-import {NgxSpinnerService} from 'ngx-spinner'
-
+import {NgxSpinnerService} from 'ngx-spinner';
+import {MediaObserver, MediaChange} from '@angular/flex-layout';
+import {Subscription} from 'rxjs';
 @Component({
   selector: 'material-app',
   templateUrl: 'app.component.html',
@@ -14,6 +15,8 @@ export class AppComponent implements OnInit   {
   @ViewChild('appDrawer') appDrawer: ElementRef;
   public hide
   version = VERSION;
+  mediaSub:Subscription;
+  deviceXs:boolean;
   navItems: NavItem[] = [
     {
       displayName: 'Dashboard',
@@ -42,11 +45,18 @@ export class AppComponent implements OnInit   {
     }
   ];
 
-  constructor(private navService: NavService, private spinnerService: NgxSpinnerService) {
+  constructor(private mediaObserver: MediaObserver, private navService: NavService, private spinnerService: NgxSpinnerService) {
   }
 
   ngOnInit(){
-    this.spinner()
+    this.spinner();
+    this.mediaSub=this.mediaObserver.media$.subscribe((result:MediaChange)=>{
+        this.deviceXs=result.mqAlias=='xs' ? true :false;
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.mediaSub.unsubscribe();
   }
 
   ngAfterViewInit() {

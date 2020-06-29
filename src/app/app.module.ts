@@ -38,6 +38,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatMenuModule} from '@angular/material/menu';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ShipmentsService } from './services/shipment-list/shipments.service';
 import {AngularFireDatabaseModule, AngularFireDatabase} from '@angular/fire/database'
@@ -45,6 +46,7 @@ import {environment} from '../enviroments/environment'
 import { AngularFireModule } from '@angular/fire';
 import { TagService } from './services/tags/tag.service';
 import {MatChipsModule} from '@angular/material/chips';
+
 
 @NgModule({
   imports: [
@@ -79,6 +81,7 @@ import {MatChipsModule} from '@angular/material/chips';
     MatDialogModule,
     AngularFireDatabaseModule,
     MatChipsModule,
+    MatMenuModule,
     AngularFireModule.initializeApp(environment.firebase),
     
   ],
@@ -93,7 +96,7 @@ import {MatChipsModule} from '@angular/material/chips';
     SettingsComponent,
     NofoundpageComponent,
     ViewModalComponent,
-    // FilterPipe,
+ 
    
   ],
   bootstrap: [AppComponent],

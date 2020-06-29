@@ -1,4 +1,3 @@
-
 // Header Style
 .header {
   &__logo {
@@ -16,6 +15,97 @@
   }
 }
 
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .header__search-input {
+    display: none !important;
+  }
+  .button-create__shipment {
+    display: none !important;
+  }
+
+  .container {
+    // background-color: red;
+    height: 20%
+    ;
+  }
+  .create-shipment__margin-top{
+    margin-top: 5px !important;
+  }
+  .select-status__margin-top{
+    margin-top: 5px !important;
+    padding-left: 20px;
+    
+  }
+  .shipment-origin__information{
+    width: 100px !important;
+  }
+  .custumer-charge{
+    display: none !important;
+  }
+  .carrier-charge{
+    display: none !important;
+  }
+  .shipment_reference{
+     font-size: 13px;
+     max-width: 30%;
+  }
+
+  .status-carrier__span{
+   display: none !important;
+  }
+
+  .status-customer__span{
+    display: none !important;
+    
+  }
+  .progress-bar__flex{
+    max-width: 20% !important;
+    padding-top: 10px !important;
+  }
+  .container-shipment__information{
+    flex-wrap: wrap !important;
+  }
+  .test{
+    max-width: 5px !important;
+  }
+
+  .status_h5{
+    display: none !important;
+  }
+  .test1{
+    flex-direction: row;
+    padding-left: 16px;
+  }
+  .test2{
+    margin-left: 40px !important;
+    padding-left: 10px;
+  }
+  
+
+  .company-name__flex{
+    flex: inherit !important;
+  }
+  .mat-button__flex{
+    max-width: 2px !important;
+    margin-left: 150px !important;
+  }
+  .shipment-company__span{
+    display: none !important;
+  }
+}
+
+.select-status__margin-top{
+  margin-top: 60px;
+}
+
+.create-shipment__margin-top{
+  margin-top: 60px;
+}
 // Material Style
 .mat-accordion .mat-expansion-panel {
   margin-bottom: 5px;
@@ -32,7 +122,7 @@
   margin: 25px;
 }
 
-// Search 
+// Search
 .search {
   width: 90%;
   height: 39px;
@@ -115,8 +205,6 @@ body.theme-default .mat-button-focus-overlay:hover {
   display: none;
 }
 
-
-
 .select-status {
   background: #dfdfdf;
   -webkit-border-radius: 100px;
@@ -170,8 +258,6 @@ body.theme-default .mat-button-focus-overlay:hover {
   justify-content: flex-start;
   box-shadow: 0 4px 16px rgb(187, 187, 187);
   transition: all 0.2s ease;
-
-  
 }
 
 .button-create__shipment:hover {
@@ -179,5 +265,3 @@ body.theme-default .mat-button-focus-overlay:hover {
   box-shadow: 0 4px 16px #1e3953;
   transition: all 0.2s ease;
 }
-
-
