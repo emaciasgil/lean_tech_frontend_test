@@ -1,7 +1,7 @@
 import {Component, ViewChild, ElementRef, ViewEncapsulation, AfterViewInit, OnInit} from '@angular/core';
 import {VERSION} from '@angular/material/core';
 import {NavItem} from './nav-item';
-import {NavService} from './nav.service';
+import {NavService} from './services/navservice/nav.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {MediaObserver, MediaChange} from '@angular/flex-layout';
 import {Subscription} from 'rxjs';

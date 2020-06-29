@@ -64,12 +64,23 @@
   margin-left: 0px !important;
   width: 100% !important;
 }
+ .shipment-information__icon{
+   display: none;
+ }
 
-.shipment_information__flex{
-
+ th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+  padding-left: 0 !important;
 }
 
+.create-shipment__margin-top{
+  max-height: 0px !important;
+  display: none !important;
+}
 
+.select-status__margin-top{
+  margin-top: 0px !important;
+  display: none !important;
+}
 }
 
 
