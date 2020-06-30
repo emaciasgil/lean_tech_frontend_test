@@ -47,7 +47,7 @@ $ ng serve
 
 Compodoc Commands:
 ```sh
-$ npx compodoc -p tsconfig.json
+$ npx compodoc -p tsconfig.json -s
 
 Enter localhost 127.0.0
 ```
