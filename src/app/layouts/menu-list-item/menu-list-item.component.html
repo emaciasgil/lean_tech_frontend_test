@@ -1,3 +1,5 @@
+<!--This component allows you to list the elements in the sidebar. -->
+
 <a mat-list-item [ngStyle]="{'padding-left': (depth * 10) + 'px'}" (click)="onItemSelected(item)"
    [ngClass]="{'active': item.route ? router.isActive(item.route, true): false, 'expanded': expanded}"
    class="menu-list-item">

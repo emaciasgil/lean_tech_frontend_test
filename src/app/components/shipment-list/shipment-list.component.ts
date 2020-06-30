@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class ShipmentListComponent implements OnInit {
   carrierRate:number;
+  //Total Shipments
   shipmentTotal:any=[];
   totalCarrier:number;
   totalCustomer:number;
@@ -25,40 +26,24 @@ export class ShipmentListComponent implements OnInit {
   filterShipment:string;
   term: string;
   id:string;
+  
 
   chargeTotal:any={}
   readonly ROOT_URL='https://square.lean-tech.io/jsonmock/api/orders/'
   constructor(public shipmentService: ShipmentsService,private http: HttpClient, @Optional()  public dialog:MatDialog, @Optional() @Inject(MAT_DIALOG_DATA) public data,  private _routing: Router) { 
  
-  this.totalCarrier= this.shipmentTotal.reduce((
-    acc,
-    obj,
-  ) => (parseFloat(obj.carrierRate[0].charge) + parseFloat(obj.carrierRate[1].charge)),
-  0);
-
-
-  this.totalCustomer= this.shipmentTotal.reduce((
-    acc,
-    obj,
-  ) => (parseFloat(obj.customerRate[0].charge) + parseFloat(obj.customerRate[1].charge)),
-  0);
-  
-  
 
   }
   
   ngOnInit() {
-   this.shipmentService.getShipmentsCharge().subscribe(result=>(this.shipmentTotal=result))
+   this.shipmentService.getShipmentsCharge().subscribe(result=>{this.shipmentTotal=result}
+    )
   }
+  
 
 
-
-  formatDate(date) {
-    return moment(date).utc().format('YYYY-MM-DD');
-  }
-
+  //Create Mat Dialog for Shipment View
   onCreate(shipment){
-    console.log("que llega", shipment)
     const dialogRef = this.dialog.open(ViewModalComponent,{
       height: '95%',
       width:'100%',
@@ -67,7 +52,6 @@ export class ShipmentListComponent implements OnInit {
      },)
     
    dialogRef.afterClosed().subscribe(result => {
-    console.log(`Dialog result: ${result}`);
   });
   }
 }

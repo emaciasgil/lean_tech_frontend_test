@@ -4,12 +4,38 @@
 
 //Shipment Information Style
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 600px)  {
   .shipment-information__h3{
     margin-left: 0px !important;
   }
+
+  .margin-content__inputs{
+     margin-left: 0% !important;
+  }
+
+  .margin-content__input2{
+    margin-left: 20% !important;
+  }
+
+  .close {
+    position: relative;
+    top: -23px;
+    right: 0px !important;
+    button {
+      .mat-icon {
+        font-size: 20px;
+      }
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+  :host ::ng-deep .mat-button-focus-overlay {
+    background-color: transparent !important;
+  }
+
   .scroll-panel{
-    margin-left: 30px !important;
+    margin-left: 0px !important;
   }
 
   .shipment-information__icon{
@@ -29,6 +55,10 @@
   }
   .mat-paginator__modal{
     display: none;
+  }
+
+  .mat-card{
+    padding: 7!important;
   }
 
   .button-form__requote-flex{
@@ -84,6 +114,17 @@
 }
 
 
+@media screen and (min-width:600) and (max-width:1128px){
+  
+  .chip__mat-label{
+    padding-left: 10px;
+  }
+
+  .button-form__modal{
+    width: -webkit-fill-available !important;
+  }
+
+}
 
 .shipment-information__h3{
   margin-left: 10px;
@@ -127,6 +168,14 @@
   transition: all 0.2s ease;
   cursor: pointer;
   
+}
+
+// .margin-content__inputs{
+//   margin-left: 10% !important;
+// }
+
+.margin-content__input2{
+  margin-left: 20% !important;
 }
 
 .button-form__modal:hover {
@@ -266,6 +315,9 @@
   color: white !important;
 }
 
+.margin-content__inputs[_ngcontent-inc-c231] {
+   margin-left: 0% !important;
+}
 //Select Rated
 .select-rated {
   background: #203455;

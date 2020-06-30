@@ -63,6 +63,7 @@ export class AppComponent implements OnInit   {
     this.navService.appDrawer = this.appDrawer;
   }
 
+  //Function Spinner 
   spinner():void{
     this.spinnerService.show();
     setTimeout(() => {

@@ -8,519 +8,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	    <link rel="stylesheet" href="./styles/style.css">
+	      <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="./" class="navbar-brand">dynamic-nested-sidenav-menu documentation</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-            <div id="book-search-input" role="search">
-                <input type="text" placeholder="Type to search">
-            </div>
-            <nav>
-            
-                <ul class="list">
-            
-                    <li class="title">
-                        <a href="./index.html">dynamic-nested-sidenav-menu documentation</a>
-                    </li>
-            
-                    <li class="divider"></li>
-            
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="./index.html"><span class="fa fa-home"></span>Getting started</a>
-                        <ul class="links">
-                                <li class="link">
-                                    <a href="./"
-                                        
-                                        
-                                        >
-                                        <span class="fa fa-fw fa-th"></span>Overview
-                                    </a>
-                                </li>
-                                <li class="link">
-                                    <a href="./dependencies.html"
-                                        
-                                        >
-                                        <span class="fa fa-fw fa-list"></span>Dependencies
-                                    </a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-                    <li class="chapter modules">
-                        <a data-type="chapter-link" href="./modules.html" >
-                            <div class="menu-toggler linked" data-toggle="collapse"
-                                    data-target="#xs-modules-links"
-                            >
-                                <span class="fa fa-fw fa-archive"></span>
-                                <span class="link-name">Modules</span>
-                                <span class="fa fa-angle-down"></span>
-                            </div>
-                        </a>
-                        <ul class="links collapse "
-                                id="xs-modules-links"
-                            >
-                                <li class="link">
-                                    <a href="./modules/AppModule.html" >AppModule</a>
-                                        <li class="chapter inner">
-                                            <div class="simple menu-toggler" data-toggle="collapse"
-                                                    data-target="#xs-components-links-module-AppModule-b74879f6-3b28-41a1-9643-c16b568be2b6"
-                                                >
-                                                <span class="fa fa-fw fa-cogs"></span>
-                                                <span>Components</span>
-                                                <span class="fa fa-angle-down"></span>
-                                            </div>
-                                            <ul class="links collapse"
-                                                    id="xs-components-links-module-AppModule-b74879f6-3b28-41a1-9643-c16b568be2b6"
-                                                >
-                                                    <li class="link">
-                                                        <a href="./components/AppComponent.html" >AppComponent</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./components/MenuListItemComponent.html" >MenuListItemComponent</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./components/TopNavComponent.html" >TopNavComponent</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./components/ShipmentListComponent.html" >ShipmentListComponent</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./components/QuotesComponent.html" >QuotesComponent</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./components/DashboardComponent.html" >DashboardComponent</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./components/InvoiceComponent.html" >InvoiceComponent</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./components/SettingsComponent.html" >SettingsComponent</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./components/NofoundpageComponent.html" >NofoundpageComponent</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./components/ViewModalComponent.html" >ViewModalComponent</a>
-                                                    </li>
-                                            </ul>
-                                        </li>
-                                        <li class="chapter inner">
-                                            <div class="simple menu-toggler" data-toggle="collapse"
-                                                    data-target="#xs-injectables-links-module-AppModule-b74879f6-3b28-41a1-9643-c16b568be2b6"
-                                                >
-                                                <span class="fa fa-fw fa-long-arrow-down"></span>
-                                                <span>Injectables</span>
-                                                <span class="fa fa-angle-down"></span>
-                                            </div>
-                                            <ul class="links collapse"
-                                                    id="xs-injectables-links-module-AppModule-b74879f6-3b28-41a1-9643-c16b568be2b6"
-                                                >
-                                                    <li class="link">
-                                                        <a href="./injectables/NavService.html" >NavService</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./injectables/ShipmentsService.html" >ShipmentsService</a>
-                                                    </li>
-                                                    <li class="link">
-                                                        <a href="./injectables/TagService.html" >TagService</a>
-                                                    </li>
-                                            </ul>
-                                        </li>
-                                </li>
-                                <li class="link">
-                                    <a href="./modules/AppRoutingModule.html" >AppRoutingModule</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-            
-            
-            
-                            <li class="chapter">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-injectables-links"
-                                    >
-                                    <span class="fa fa-fw fa-long-arrow-down"></span>
-                                    <span>Injectables</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse "
-                                        id="xs-injectables-links"
-                                    >
-                                        <li class="link">
-                                            <a href="./injectables/NavService.html" >NavService</a>
-                                        </li>
-                                        <li class="link">
-                                            <a href="./injectables/ShipmentsService.html" >ShipmentsService</a>
-                                        </li>
-                                        <li class="link">
-                                            <a href="./injectables/TagService.html" >TagService</a>
-                                        </li>
-                                </ul>
-                            </li>
-            
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-interfaces-links"
-                            >
-                            <span class="fa fa-fw fa-info"></span>
-                            <span>Interfaces</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-interfaces-links"
-                            >
-                                <li class="link">
-                                    <a href="./interfaces/Carrier.html" >Carrier</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./interfaces/CarrierRate.html" >CarrierRate</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./interfaces/CustomerRate.html" >CustomerRate</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./interfaces/Destination.html" >Destination</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./interfaces/NavItem.html" >NavItem</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./interfaces/Reference.html" >Reference</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./interfaces/ShipmentInterface.html" >ShipmentInterface</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./interfaces/Shipper.html" >Shipper</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./interfaces/TrackingDetail.html" >TrackingDetail</a>
-                                </li>
-                                <li class="link">
-                                    <a href="./interfaces/Uplift.html" >Uplift</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                            <li class="chapter">
-                                <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-pipes-links"
-                                    >
-                                    <span class="fa fa-fw fa-plus"></span>
-                                    <span>Pipes</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                                <ul class="links collapse "
-                                        id="xs-pipes-links"
-                                    >
-                                        <li class="link">
-                                            <a href="./pipes/FilterPipe.html" >FilterPipe</a>
-                                        </li>
-                                </ul>
-                            </li>
-            
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-miscellaneous-links"
-                            >
-                            <span class="fa fa-fw fa-cubes"></span>
-                            <span>Miscellaneous</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-miscellaneous-links"
-                            >
-                                <li class="link">
-                                  <a href="./miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
-                                </li>
-                                <li class="link">
-                                  <a href="./miscellaneous/variables.html" data-type="entity-link" >Variables</a>
-                                </li>
-                        </ul>
-                    </li>
-            
-                        <li class="chapter">
-                            <a data-type="chapter-link" href="./routes.html" ><span class="fa fa-fw fa-code-fork"></span>Routes</a>
-                        </li>
-            
-                    <li class="chapter">
-                        <a data-type="chapter-link" href="./coverage.html"  class="active" ><span class="fa fa-fw fa-tasks"></span>Documentation coverage</a>
-                    </li>
-            
-                    <li class="divider"></li>
-                    <li class="copyright">
-                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                        <img src="./images/compodoc-vectorise.svg" class="img-responsive">
-                            </a>
-                    </li>
-            
-                </ul>
-            
-            </nav>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <nav>
-                   
-                       <ul class="list">
-                   
-                           <li class="title">
-                               <a href="./index.html">dynamic-nested-sidenav-menu documentation</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                   
-                               <div id="book-search-input" role="search">
-                                   <input type="text" placeholder="Type to search">
-                               </div>
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="./index.html"><span class="fa fa-home"></span>Getting started</a>
-                               <ul class="links">
-                                       <li class="link">
-                                           <a href="./"
-                                               
-                                               
-                                               >
-                                               <span class="fa fa-fw fa-th"></span>Overview
-                                           </a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./dependencies.html"
-                                               
-                                               >
-                                               <span class="fa fa-fw fa-list"></span>Dependencies
-                                           </a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                           <li class="chapter modules">
-                               <a data-type="chapter-link" href="./modules.html" >
-                                   <div class="menu-toggler linked" data-toggle="collapse"
-                                           data-target="#modules-links"
-                                   >
-                                       <span class="fa fa-fw fa-archive"></span>
-                                       <span class="link-name">Modules</span>
-                                       <span class="fa fa-angle-down"></span>
-                                   </div>
-                               </a>
-                               <ul class="links collapse "
-                                       id="modules-links"
-                   >
-                                       <li class="link">
-                                           <a href="./modules/AppModule.html" >AppModule</a>
-                                               <li class="chapter inner">
-                                                   <div class="simple menu-toggler" data-toggle="collapse"
-                                                           data-target="#components-links-module-AppModule-b74879f6-3b28-41a1-9643-c16b568be2b6"
-                   >
-                                                       <span class="fa fa-fw fa-cogs"></span>
-                                                       <span>Components</span>
-                                                       <span class="fa fa-angle-down"></span>
-                                                   </div>
-                                                   <ul class="links collapse"
-                                                           id="components-links-module-AppModule-b74879f6-3b28-41a1-9643-c16b568be2b6"
-                   >
-                                                           <li class="link">
-                                                               <a href="./components/AppComponent.html" >AppComponent</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./components/MenuListItemComponent.html" >MenuListItemComponent</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./components/TopNavComponent.html" >TopNavComponent</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./components/ShipmentListComponent.html" >ShipmentListComponent</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./components/QuotesComponent.html" >QuotesComponent</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./components/DashboardComponent.html" >DashboardComponent</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./components/InvoiceComponent.html" >InvoiceComponent</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./components/SettingsComponent.html" >SettingsComponent</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./components/NofoundpageComponent.html" >NofoundpageComponent</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./components/ViewModalComponent.html" >ViewModalComponent</a>
-                                                           </li>
-                                                   </ul>
-                                               </li>
-                                               <li class="chapter inner">
-                                                   <div class="simple menu-toggler" data-toggle="collapse"
-                                                           data-target="#injectables-links-module-AppModule-b74879f6-3b28-41a1-9643-c16b568be2b6"
-                   >
-                                                       <span class="fa fa-fw fa-long-arrow-down"></span>
-                                                       <span>Injectables</span>
-                                                       <span class="fa fa-angle-down"></span>
-                                                   </div>
-                                                   <ul class="links collapse"
-                                                           id="injectables-links-module-AppModule-b74879f6-3b28-41a1-9643-c16b568be2b6"
-                   >
-                                                           <li class="link">
-                                                               <a href="./injectables/NavService.html" >NavService</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./injectables/ShipmentsService.html" >ShipmentsService</a>
-                                                           </li>
-                                                           <li class="link">
-                                                               <a href="./injectables/TagService.html" >TagService</a>
-                                                           </li>
-                                                   </ul>
-                                               </li>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./modules/AppRoutingModule.html" >AppRoutingModule</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                   
-                   
-                   
-                                   <li class="chapter">
-                                       <div class="simple menu-toggler" data-toggle="collapse"
-                                               data-target="#injectables-links"
-                   >
-                                           <span class="fa fa-fw fa-long-arrow-down"></span>
-                                           <span>Injectables</span>
-                                           <span class="fa fa-angle-down"></span>
-                                       </div>
-                                       <ul class="links collapse "
-                                               id="injectables-links"
-                   >
-                                               <li class="link">
-                                                   <a href="./injectables/NavService.html" >NavService</a>
-                                               </li>
-                                               <li class="link">
-                                                   <a href="./injectables/ShipmentsService.html" >ShipmentsService</a>
-                                               </li>
-                                               <li class="link">
-                                                   <a href="./injectables/TagService.html" >TagService</a>
-                                               </li>
-                                       </ul>
-                                   </li>
-                   
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#interfaces-links"
-                   >
-                                   <span class="fa fa-fw fa-info"></span>
-                                   <span>Interfaces</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="interfaces-links"
-                   >
-                                       <li class="link">
-                                           <a href="./interfaces/Carrier.html" >Carrier</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./interfaces/CarrierRate.html" >CarrierRate</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./interfaces/CustomerRate.html" >CustomerRate</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./interfaces/Destination.html" >Destination</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./interfaces/NavItem.html" >NavItem</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./interfaces/Reference.html" >Reference</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./interfaces/ShipmentInterface.html" >ShipmentInterface</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./interfaces/Shipper.html" >Shipper</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./interfaces/TrackingDetail.html" >TrackingDetail</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="./interfaces/Uplift.html" >Uplift</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                                   <li class="chapter">
-                                       <div class="simple menu-toggler" data-toggle="collapse"
-                                               data-target="#pipes-links"
-                   >
-                                           <span class="fa fa-fw fa-plus"></span>
-                                           <span>Pipes</span>
-                                           <span class="fa fa-angle-down"></span>
-                                       </div>
-                                       <ul class="links collapse "
-                                               id="pipes-links"
-                   >
-                                               <li class="link">
-                                                   <a href="./pipes/FilterPipe.html" >FilterPipe</a>
-                                               </li>
-                                       </ul>
-                                   </li>
-                   
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#miscellaneous-links"
-                   >
-                                   <span class="fa fa-fw fa-cubes"></span>
-                                   <span>Miscellaneous</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="miscellaneous-links"
-                   >
-                                       <li class="link">
-                                         <a href="./miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
-                                       </li>
-                                       <li class="link">
-                                         <a href="./miscellaneous/variables.html" data-type="entity-link" >Variables</a>
-                                       </li>
-                               </ul>
-                           </li>
-                   
-                               <li class="chapter">
-                                   <a data-type="chapter-link" href="./routes.html" ><span class="fa fa-fw fa-code-fork"></span>Routes</a>
-                               </li>
-                   
-                           <li class="chapter">
-                               <a data-type="chapter-link" href="./coverage.html"  class="active" ><span class="fa fa-fw fa-tasks"></span>Documentation coverage</a>
-                           </li>
-                   
-                           <li class="divider"></li>
-                           <li class="copyright">
-                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
-                                               <img src="./images/compodoc-vectorise.svg" class="img-responsive">
-                                   </a>
-                           </li>
-                   
-                       </ul>
-                   
-                   </nav>
+                   <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
                <div class="content coverage">
@@ -539,11 +43,16 @@
 
 
 
+                   
+
+
 <ol class="breadcrumb">
-  <li>Documentation coverage</li>
+    <li>Documentation coverage</li>
 </ol>
 
-<img src="./images/coverage-badge.svg">
+<div>
+    <img src="./images/coverage-badge-documentation.svg">
+</div>
 
 <table class="table table-bordered coverage" id="coverage-table">
     <thead class="coverage-header">
@@ -558,30 +67,22 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./components/AppComponent.html">src/app/app.component.ts</a>
+                <a href="./components/AppComponent.html">src/app/app.component.ts</a>
             </td>
-            <td>
-                component
-            </td>
-            <td>
-                AppComponent
-            </td>
+            <td>component</td>
+            <td>AppComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
-                <span class="coverage-count">(0/9)</span>
+                <span class="coverage-count">(0/12)</span>
             </td>
         </tr>
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./components/DashboardComponent.html">src/app/components/dashboard/dashboard.component.ts</a>
+                <a href="./components/DashboardComponent.html">src/app/components/dashboard/dashboard.component.ts</a>
             </td>
-            <td>
-                component
-            </td>
-            <td>
-                DashboardComponent
-            </td>
+            <td>component</td>
+            <td>DashboardComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -590,14 +91,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./components/InvoiceComponent.html">src/app/components/invoice/invoice.component.ts</a>
+                <a href="./components/InvoiceComponent.html">src/app/components/invoice/invoice.component.ts</a>
             </td>
-            <td>
-                component
-            </td>
-            <td>
-                InvoiceComponent
-            </td>
+            <td>component</td>
+            <td>InvoiceComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -606,14 +103,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./components/NofoundpageComponent.html">src/app/components/nofoundpage/nofoundpage.component.ts</a>
+                <a href="./components/NofoundpageComponent.html">src/app/components/nofoundpage/nofoundpage.component.ts</a>
             </td>
-            <td>
-                component
-            </td>
-            <td>
-                NofoundpageComponent
-            </td>
+            <td>component</td>
+            <td>NofoundpageComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -622,14 +115,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./components/QuotesComponent.html">src/app/components/quotes/quotes.component.ts</a>
+                <a href="./components/QuotesComponent.html">src/app/components/quotes/quotes.component.ts</a>
             </td>
-            <td>
-                component
-            </td>
-            <td>
-                QuotesComponent
-            </td>
+            <td>component</td>
+            <td>QuotesComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -638,14 +127,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./components/SettingsComponent.html">src/app/components/settings/settings.component.ts</a>
+                <a href="./components/SettingsComponent.html">src/app/components/settings/settings.component.ts</a>
             </td>
-            <td>
-                component
-            </td>
-            <td>
-                SettingsComponent
-            </td>
+            <td>component</td>
+            <td>SettingsComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -654,30 +139,22 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./components/ShipmentListComponent.html">src/app/components/shipment-list/shipment-list.component.ts</a>
+                <a href="./components/ShipmentListComponent.html">src/app/components/shipment-list/shipment-list.component.ts</a>
             </td>
-            <td>
-                component
-            </td>
-            <td>
-                ShipmentListComponent
-            </td>
+            <td>component</td>
+            <td>ShipmentListComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
-                <span class="coverage-count">(0/24)</span>
+                <span class="coverage-count">(0/23)</span>
             </td>
         </tr>
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./components/ViewModalComponent.html">src/app/components/shipment-list/view-modal/view-modal.component.ts</a>
+                <a href="./components/ViewModalComponent.html">src/app/components/shipment-list/view-modal/view-modal.component.ts</a>
             </td>
-            <td>
-                component
-            </td>
-            <td>
-                ViewModalComponent
-            </td>
+            <td>component</td>
+            <td>ViewModalComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/42)</span>
@@ -686,14 +163,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/Carrier.html">src/app/interfaces/shipments.interface.ts</a>
+                <a href="./interfaces/Carrier.html">src/app/interfaces/shipments.interface.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                Carrier
-            </td>
+            <td>interface</td>
+            <td>Carrier</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -702,14 +175,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/CarrierRate.html">src/app/interfaces/shipments.interface.ts</a>
+                <a href="./interfaces/CarrierRate.html">src/app/interfaces/shipments.interface.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                CarrierRate
-            </td>
+            <td>interface</td>
+            <td>CarrierRate</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -718,14 +187,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/CustomerRate.html">src/app/interfaces/shipments.interface.ts</a>
+                <a href="./interfaces/CustomerRate.html">src/app/interfaces/shipments.interface.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                CustomerRate
-            </td>
+            <td>interface</td>
+            <td>CustomerRate</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -734,14 +199,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/Destination.html">src/app/interfaces/shipments.interface.ts</a>
+                <a href="./interfaces/Destination.html">src/app/interfaces/shipments.interface.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                Destination
-            </td>
+            <td>interface</td>
+            <td>Destination</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -750,14 +211,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/Reference.html">src/app/interfaces/shipments.interface.ts</a>
+                <a href="./interfaces/Reference.html">src/app/interfaces/shipments.interface.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                Reference
-            </td>
+            <td>interface</td>
+            <td>Reference</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -766,14 +223,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/ShipmentInterface.html">src/app/interfaces/shipments.interface.ts</a>
+                <a href="./interfaces/ShipmentInterface.html">src/app/interfaces/shipments.interface.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                ShipmentInterface
-            </td>
+            <td>interface</td>
+            <td>ShipmentInterface</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/19)</span>
@@ -782,14 +235,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/Shipper.html">src/app/interfaces/shipments.interface.ts</a>
+                <a href="./interfaces/Shipper.html">src/app/interfaces/shipments.interface.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                Shipper
-            </td>
+            <td>interface</td>
+            <td>Shipper</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/7)</span>
@@ -798,14 +247,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/TrackingDetail.html">src/app/interfaces/shipments.interface.ts</a>
+                <a href="./interfaces/TrackingDetail.html">src/app/interfaces/shipments.interface.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                TrackingDetail
-            </td>
+            <td>interface</td>
+            <td>TrackingDetail</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -814,14 +259,10 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/Uplift.html">src/app/interfaces/shipments.interface.ts</a>
+                <a href="./interfaces/Uplift.html">src/app/interfaces/shipments.interface.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                Uplift
-            </td>
+            <td>interface</td>
+            <td>Uplift</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/3)</span>
@@ -830,110 +271,22 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./components/MenuListItemComponent.html">src/app/menu-list-item/menu-list-item.component.ts</a>
+                <a href="./components/MenuListItemComponent.html">src/app/layouts/menu-list-item/menu-list-item.component.ts</a>
             </td>
-            <td>
-                component
-            </td>
-            <td>
-                MenuListItemComponent
-            </td>
+            <td>component</td>
+            <td>MenuListItemComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
-                <span class="coverage-count">(0/10)</span>
+                <span class="coverage-count">(0/11)</span>
             </td>
         </tr>
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./interfaces/NavItem.html">src/app/nav-item.ts</a>
+                <a href="./components/TopNavComponent.html">src/app/layouts/top-nav/top-nav.component.ts</a>
             </td>
-            <td>
-                interface
-            </td>
-            <td>
-                NavItem
-            </td>
-            <td align="right" data-sort="0">
-                <span class="coverage-percent">0 %</span>
-                <span class="coverage-count">(0/6)</span>
-            </td>
-        </tr>
-        <tr class="low">
-            <td>
-                <!-- miscellaneous -->
-                    <a href="./injectables/NavService.html">src/app/nav.service.ts</a>
-            </td>
-            <td>
-                injectable
-            </td>
-            <td>
-                NavService
-            </td>
-            <td align="right" data-sort="0">
-                <span class="coverage-percent">0 %</span>
-                <span class="coverage-count">(0/6)</span>
-            </td>
-        </tr>
-        <tr class="low">
-            <td>
-                <!-- miscellaneous -->
-                    <a href="./pipes/FilterPipe.html">src/app/pipe/filter.pipe.ts</a>
-            </td>
-            <td>
-                pipe
-            </td>
-            <td>
-                FilterPipe
-            </td>
-            <td align="right" data-sort="0">
-                <span class="coverage-percent">0 %</span>
-                <span class="coverage-count">(0/1)</span>
-            </td>
-        </tr>
-        <tr class="low">
-            <td>
-                <!-- miscellaneous -->
-                    <a href="./injectables/ShipmentsService.html">src/app/services/shipment-list/shipments.service.ts</a>
-            </td>
-            <td>
-                injectable
-            </td>
-            <td>
-                ShipmentsService
-            </td>
-            <td align="right" data-sort="0">
-                <span class="coverage-percent">0 %</span>
-                <span class="coverage-count">(0/7)</span>
-            </td>
-        </tr>
-        <tr class="low">
-            <td>
-                <!-- miscellaneous -->
-                    <a href="./injectables/TagService.html">src/app/services/tags/tag.service.ts</a>
-            </td>
-            <td>
-                injectable
-            </td>
-            <td>
-                TagService
-            </td>
-            <td align="right" data-sort="0">
-                <span class="coverage-percent">0 %</span>
-                <span class="coverage-count">(0/6)</span>
-            </td>
-        </tr>
-        <tr class="low">
-            <td>
-                <!-- miscellaneous -->
-                    <a href="./components/TopNavComponent.html">src/app/top-nav/top-nav.component.ts</a>
-            </td>
-            <td>
-                component
-            </td>
-            <td>
-                TopNavComponent
-            </td>
+            <td>component</td>
+            <td>TopNavComponent</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/4)</span>
@@ -942,14 +295,22 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./miscellaneous/variables.html#environment">src/enviroments/environment.prod.ts</a>
+                <a href="./interfaces/NavItem.html">src/app/nav-item.ts</a>
             </td>
+            <td>interface</td>
+            <td>NavItem</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/6)</span>
+            </td>
+        </tr>
+        <tr class="low">
             <td>
-                variable
+                <!-- miscellaneous -->
+                <a href="./pipes/FilterPipe.html">src/app/pipe/filter.pipe.ts</a>
             </td>
-            <td>
-                environment
-            </td>
+            <td>pipe</td>
+            <td>FilterPipe</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/1)</span>
@@ -958,14 +319,58 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                    <a href="./miscellaneous/variables.html#environment">src/enviroments/environment.ts</a>
+                <a href="./injectables/NavService.html">src/app/services/navservice/nav.service.ts</a>
             </td>
+            <td>injectable</td>
+            <td>NavService</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/6)</span>
+            </td>
+        </tr>
+        <tr class="low">
             <td>
-                variable
+                <!-- miscellaneous -->
+                <a href="./injectables/ShipmentsService.html">src/app/services/shipment-list/shipments.service.ts</a>
             </td>
+            <td>injectable</td>
+            <td>ShipmentsService</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/9)</span>
+            </td>
+        </tr>
+        <tr class="low">
             <td>
-                environment
+                <!-- miscellaneous -->
+                <a href="./injectables/TagService.html">src/app/services/tags/tag.service.ts</a>
             </td>
+            <td>injectable</td>
+            <td>TagService</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/6)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#environment">src/enviroments/environment.prod.ts</a>
+            </td>
+            <td>variable</td>
+            <td>environment</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#environment">src/enviroments/environment.ts</a>
+            </td>
+            <td>variable</td>
+            <td>environment</td>
             <td align="right" data-sort="0">
                 <span class="coverage-percent">0 %</span>
                 <span class="coverage-count">(0/1)</span>
@@ -982,7 +387,7 @@
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -994,6 +399,19 @@
            </div>
        </div>
 
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'coverage';
+            var COMPODOC_CURRENT_PAGE_URL = 'coverage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
        <script src="./js/libs/bootstrap-native.js"></script>
 
        <script src="./js/libs/es6-shim.min.js"></script>
@@ -1003,17 +421,16 @@
 
        <script src="./js/compodoc.js"></script>
 
-       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 0;</script>
-
-       <script src="./js/search/search.js"></script>
-       <script src="./js/search/lunr.min.js"></script>
-       <script src="./js/search/search-lunr.js"></script>
-
        <script src="./js/tabs.js"></script>
        <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
        <script src="./js/libs/prism.js"></script>
        <script src="./js/sourceCode.js"></script>
-       <script src="./js/search/search_index.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
 
 
     </body>

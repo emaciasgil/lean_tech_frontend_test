@@ -15,7 +15,7 @@
         <h3  ><b>Shipment Information</b></h3>
       </div>
       <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" class="shipment_information__flex">
-        <div fxFlex="5%" fxFlex.xs="100%" >
+        <div fxFlex="5%" fxFlex.xs="100%" fxFlex.sm="10" >
           <img   class="shipment-information__icon" src="../../../../assets/icons/shipment info.svg" alt="" srcset="">
         </div>
         <div fxFlex="95%">
@@ -112,12 +112,12 @@
             Print Bol, Invoice, labels,requote and more.
           </div>
         </div>
-        <div fxFlex="15%" fxFlex.xs="20">
+        <div fxFlex="15%" fxFlex.xs="20" fxFlex.sm="0" fxFlex.md="0">
           <button class="button-form__modal" style="width: 140px; height: 30px;">
             <img style="vertical-align: middle;" src="../../../assets/icons/bol.svg"> Bol
           </button>
         </div>
-        <div fxFlex="15%" fxFlex.xs="20">
+        <div fxFlex="15%" fxFlex.xs="20" fxFlex.sm="0" fxFlex.md="0">
           <button class="button-form__modal" style="width: 140px; height: 30px;">
             <img style="vertical-align: middle;" src="../../../assets/icons/printer.svg"> Label
           </button>
@@ -200,7 +200,7 @@
                       <label for="city"><b>City</b></label>
                       <label for="state"><b>State</b></label>
                     </div>
-                    <div fxLayout="column">
+                    <div fxLayout="column" class="margin-content__inputs">
 
                       <div><input autocomplete="off" type="text" id="companyName" name="companyName"
                           [(ngModel)]="companyName"></div>
@@ -210,8 +210,7 @@
                       <div><input autocomplete="off" type="text" name="zipCode" id="zipCode" [(ngModel)]="zipCode">
                       </div>
                       <div><input autocomplete="off" type="text" name="city" id="city" [(ngModel)]="city"></div>
-                      <div><input autocomplete="off" type="text" name="state" id="state" [(ngModel)]="state"
-                          style="padding-top: 2px;"></div>
+                      <div><input autocomplete="off" type="text" name="state" id="state" [(ngModel)]="state"></div>
 
                     </div>
                   </div>
@@ -225,7 +224,7 @@
                       <label for="email"><b>email</b></label>
                       <label for="location"><b>Location</b></label>
                     </div>
-                    <div fxLayout="column">
+                    <div fxLayout="column" class="margin-content__input2">
                       <div><input autocomplete="off" type="input" id="country" name="country" [(ngModel)]="country">
                       </div>
                       <div><input autocomplete="off" type="input" id="contact" name="contact" [(ngModel)]="contact">
@@ -314,12 +313,12 @@
 
       <ng-container matColumnDef="carrierRate">
         <th mat-header-cell *matHeaderCellDef> Carrier Rate</th>
-        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.carrierRate[0].charge}} </td>
+        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.carrierRate}} </td>
       </ng-container>
 
       <ng-container matColumnDef="carrierRateTotal">
-        <th mat-header-cell *matHeaderCellDef> Carrier Rate</th>
-        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.carrierRate[1].charge}} </td>
+        <th mat-header-cell *matHeaderCellDef> Customer Rate</th>
+        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.carrierRate}} </td>
       </ng-container>
 
       <ng-container matColumnDef="carrierQuote">
@@ -344,7 +343,7 @@
 
 <!--Carrier and customer costs-->
   <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" *ngFor="let charge of dataTable">
-      <div fxFlex="30%"><b>Carrier Total:</b> ${{totalCarrier | number}}</div>  
-      <div fxFlex="70%"> <b>Customer Total:</b> ${{totalCustomer | number}}</div>
+      <div fxFlex="30%"><b>Carrier Total:</b> {{charge.carrierRate | currency}}</div>  
+      <div fxFlex="70%"> <b>Customer Total:</b> {{charge.customerRate | currency}}</div>
   </div>
 </div>

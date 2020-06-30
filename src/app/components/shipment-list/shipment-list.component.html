@@ -1,4 +1,4 @@
-<div class="container"  fxLayout="row" fxLayout.xs="column" fxLayoutWrap>
+<div class="container"  fxLayout="row" fxLayout.xs="column"  fxLayout.sm="column" fxLayoutWrap>
     <div fxFlex="40" >
       <!-- Shipment List Header -->
       <h3 class="shipment-list__h3 animate__animated animate__slideInDown   animate__delay-1s" style="margin-left: 20px;">Shipment List </h3>
@@ -55,11 +55,11 @@
 </div>
 
 <!-- filter:filterShipment" -->
-<mat-card  *ngFor="let shipment of shipmentService.shipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style animate__animated animate__backInLeft animate__delay-1s" (click)="onCreate(shipment)">
+<mat-card  *ngFor="let shipment of shipmentService.formatedShipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style animate__animated animate__backInLeft animate__delay-1s" (click)="onCreate(shipment)">
 
   <div fxLayout="row" fxLayoutAlign="">
-    <div fxFlex="90" fxFlex.xs="70" fxflex.sm="70" fxFlex.md="70" style="margin-bottom: 10px;">{{shipment.shipmentId}}</div>
-    <div  fxFlex="10" fxFlex.xs="30" fxFlex.md="30" fxFlex.md="30"><div >{{shipment.createdDate }}<img  style="margin-left: 10px;" width="15px" src="../../../assets/icons/menu.png" alt=""></div ></div>
+    <div fxFlex="90" fxFlex.xs="80" fxFlex.sm="85" fxFlex.md="90" style="margin-bottom: 10px;">{{shipment.invoice[1]}}</div>
+    <div  fxFlex="10" fxFlex.xs="20" fxFlex.sm="15" fxFlex.md="10"><div >{{shipment.createDateMenu }}<img  style="margin-left: 10px;" width="15px" src="../../../assets/icons/menu.png" alt=""></div ></div>
   </div>
   
   <div fxLayout="row" class="container-shipment__information">
@@ -70,7 +70,7 @@
       <img style="vertical-align: middle;" width="20px" class=" animate__animated animate__lightSpeedInLeft animate__delay-2s" style="margin-bottom:30px; justify-content: center;" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Flecha.png" alt="" srcset="">
     </div>
     <div fxFlex="10"   class="shipment-origin__information"  fxFlex.xs="0"><b>{{shipment.destination.city}},{{shipment.destination.state}}  </b><br>
-      Feb 20 2019
+      {{shipment.finalDate}}
     </div>
     <div fxFlex="10"  class="shipment-origin__information" ></div>
     <div  fxFlex="10" class="shipment-origin__information"  fxFlex.xs="0">
@@ -90,16 +90,16 @@
       </div>
     </div>
 
-    <div fxFlex="15" fxFlex.xs="0" class="company-name__flex">
+    <div fxFlex="15" fxFlex.xs="0"   fxFlex.sm="0" class="company-name__flex">
       <img width="100px" [src]="shipment.carrier.logoUrl" onerror="javascript:this.src='../../../assets/icons/companynotdata.png'" > <br>
        <span class="shipment-company__span">{{shipment.companyName}}</span>
     </div>
     
     <div fxFlex="10"  fxFlex.xs="25" class="test1"> <span class="status-carrier__span">Status Carrier</span>
-      <mat-button-toggle style="height: 30px;     line-height: 0px;" value="bold" ><b style="color: blueviolet; margin-top: 0px;">Ready to strap</b></mat-button-toggle>
+      <mat-button-toggle class="button-status__carrier" style="height: 30px;     line-height: 0px;" value="bold" ><b style="color: blueviolet; margin-top: 0px;">Ready to strap</b></mat-button-toggle>
     </div>
     <div fxFlex="10" fxFlex.xs="25" class="test2"><span class="status-customer__span">Status Customer</span>
-      <mat-button-toggle  value="bold" style="height: 30px;" ><b style="color: crimson;">{{shipment.customerStatus}}</b></mat-button-toggle>
+      <mat-button-toggle class="button-status__customer" value="bold" style="height: 30px;" ><b style="color: crimson;">{{shipment.customerStatus }}</b></mat-button-toggle>
 
     </div>
   </div>
@@ -125,18 +125,18 @@
      
     </div>
     <div fxFlex="10"  class="custumer-charge">
-      <div *ngFor="let customer of shipment.customerRate">
-        <b>$  {{customer.charge}}</b> <br>
-        {{customer.name}}
+      <div>
+        <b>{{shipment.customerRate  | currency}}</b> <br>
+        {{shipment.customerRate.name}}
        
       </div>
      
     </div>
 
     <div fxFlex="10" class="carrier-charge">
-      <div *ngFor="let carrier of shipment.carrierRate">
-        <b>$  {{carrier.charge}} </b> <br>
-        {{carrier.name}}
+      <div>
+        <b>{{shipment.carrierRate  | currency}}</b> <br>
+        {{shipment.carrierRate.name}}
       </div>
      
     </div>

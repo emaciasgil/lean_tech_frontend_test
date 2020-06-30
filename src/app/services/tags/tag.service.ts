@@ -11,6 +11,7 @@ export class TagService {
     return this.tagList=this.firebase.list('tags')
   }
 
+  // This service allows adding the form tags in firebase
   updateTags(tags){
     this.tagList.update(tags.$key,{
       tag:this.tagList

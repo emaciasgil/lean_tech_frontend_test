@@ -148,20 +148,7 @@ export class ViewModalComponent implements OnInit {
     this.shipmentData = this.data;
     let datos = new MatTableDataSource<any>(this.shipmentData);
     this.dataTable = [datos.data];
-
-
-    this.totalCarrier= this.dataTable.reduce((
-      acc,
-      obj,
-    ) => (parseFloat(obj.carrierRate[0].charge) + parseFloat(obj.carrierRate[1].charge)),
-    0);
-
-
-    this.totalCustomer= this.dataTable.reduce((
-      acc,
-      obj,
-    ) => (parseFloat(obj.customerRate[0].charge) + parseFloat(obj.customerRate[1].charge)),
-    0);
+   
     
   }
 }
