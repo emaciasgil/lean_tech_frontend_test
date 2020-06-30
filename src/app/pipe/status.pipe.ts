@@ -1,15 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filterStatus'
+  name: 'status'
 })
-export class FilterPipe implements PipeTransform {
-  
-  //  This "tube" allows filtering by state
+export class StatusPipe implements PipeTransform {
+
   transform(value: any, arg: any): any {
     console.log(arg)
     if(arg=== '' || arg==null) return value;
-    return value.filter(item=> item.customerStatus===arg)
+    return value.filter(item=> item.trackingDetails[0].status==arg)
   }
+
 
 }

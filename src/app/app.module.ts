@@ -38,7 +38,7 @@ import { MatMenuModule } from '@angular/material/menu';
 
 //Modal 
 import { ViewModalComponent } from './components/shipment-list/view-modal/view-modal.component';
-// import { FilterPipe } from './pipe/filter.pipe';
+import { FilterPipe } from './pipe/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxSpinnerModule } from "ngx-spinner";
@@ -50,6 +50,8 @@ import { environment } from '../enviroments/environment'
 import { AngularFireModule } from '@angular/fire';
 import { TagService } from './services/tags/tag.service';
 import { MatChipsModule } from '@angular/material/chips';
+import { CarrierPipe } from './pipe/carrier.pipe';
+import { StatusPipe } from './pipe/status.pipe';
 
 
 @NgModule({
@@ -91,6 +93,7 @@ import { MatChipsModule } from '@angular/material/chips';
   ],
   declarations: [
     AppComponent,
+    FilterPipe,
     MenuListItemComponent,
     TopNavComponent,
     ShipmentListComponent,
@@ -100,6 +103,8 @@ import { MatChipsModule } from '@angular/material/chips';
     SettingsComponent,
     NofoundpageComponent,
     ViewModalComponent,
+    CarrierPipe,
+    StatusPipe,
 
 
   ],

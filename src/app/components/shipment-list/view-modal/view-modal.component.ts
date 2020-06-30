@@ -148,7 +148,7 @@ export class ViewModalComponent implements OnInit {
     this.shipmentData = this.data;
     let datos = new MatTableDataSource<any>(this.shipmentData);
     this.dataTable = [datos.data];
-   
+    console.log(this.dataTable)
     
   }
 }

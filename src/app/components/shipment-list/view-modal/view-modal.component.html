@@ -313,12 +313,12 @@
 
       <ng-container matColumnDef="carrierRate">
         <th mat-header-cell *matHeaderCellDef> Carrier Rate</th>
-        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.carrierRate}} </td>
+        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.sumCarrierRate  | currency}} </td>
       </ng-container>
 
       <ng-container matColumnDef="carrierRateTotal">
         <th mat-header-cell *matHeaderCellDef> Customer Rate</th>
-        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.carrierRate}} </td>
+        <td mat-cell class="center_data_table" *matCellDef="let element"> {{element.sumCustomerRate  | currency}} </td>
       </ng-container>
 
       <ng-container matColumnDef="carrierQuote">
@@ -336,14 +336,12 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-    <mat-paginator class="mat-paginator__modal" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    <!-- <mat-paginator class="mat-paginator__modal" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
   </div>
-
-  <hr>
 
 <!--Carrier and customer costs-->
   <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" *ngFor="let charge of dataTable">
-      <div fxFlex="30%"><b>Carrier Total:</b> {{charge.carrierRate | currency}}</div>  
-      <div fxFlex="70%"> <b>Customer Total:</b> {{charge.customerRate | currency}}</div>
+      <div fxFlex="30%"><b>Carrier Total:</b> {{charge.sumCarrierRate | currency}}</div>  
+      <div fxFlex="70%"> <b>Customer Total:</b> {{charge.sumCustomerRate | currency}}</div>
   </div>
 </div>

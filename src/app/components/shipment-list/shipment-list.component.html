@@ -16,34 +16,43 @@
       </div>
     </div>
     <div class="select-status__margin-top" fxFlex="40">
+       <!-- <button mat-icon-button matSuffix (click)="resetSearch()">
+          <mat-icon>clear</mat-icon>
+      </button> -->
       <mat-form-field class="select-status">
         <!-- Select Status -->
-        <mat-label style="margin-left: 5px; ">Status</mat-label>
-        <mat-select >
-          <mat-option *ngFor="let shipment of shipmentService.shipments ">
-              {{shipment.customerStatus}}
+
+        <mat-label style="margin-left: 5px; ">Customer
+        
+        </mat-label>
+        <mat-select  [(ngModel)]="customerStatus" >
+          <mat-option [value]="state" *ngFor="let state of customerStatusList">
+              {{state}}
           </mat-option>
         </mat-select>
       </mat-form-field>
-    
+      <div fxFlex="1"> </div>
       <!-- Select Status Customer -->
       <mat-form-field class="select-carrrier__status">
-        <mat-label style="margin-left: 5px;"> Carrier Status</mat-label>
-        <mat-select >
-          <mat-option *ngFor="let shipment of shipmentService.shipments ">
-            {{shipment.customerStatus}}
+        <mat-label style="margin-left: 5px;"> Carrier 
+        </mat-label>
+        
+        <mat-select [(ngModel)]="carrierStatus">
+          <mat-option  [value]="state" *ngFor="let state of carrierStatusList">
+            {{state}}
           </mat-option>
         </mat-select>
       </mat-form-field>
-    
+      <div fxFlex="1"> </div>
       <mat-form-field class="select-customer__status">
-        <mat-label > Customer Status</mat-label>
-        <mat-select >
-          <mat-option *ngFor="let shipment of shipmentService.shipments ">
-            {{shipment.customerStatus}}
+        <mat-label > Status</mat-label>
+        <mat-select [(ngModel)]="statusFilter">
+          <mat-option [value]="state" *ngFor="let state of statusList">
+            {{state}}
           </mat-option>
         </mat-select>
       </mat-form-field>
+      
     </div>
 
     <div fxFlex="20" class="create-shipment__margin-top">
@@ -55,7 +64,7 @@
 </div>
 
 <!-- filter:filterShipment" -->
-<mat-card  *ngFor="let shipment of shipmentService.formatedShipments | paginate: { itemsPerPage: 5, currentPage: pageActual } | filter:term" class="mat-card_style animate__animated animate__backInLeft animate__delay-1s" (click)="onCreate(shipment)">
+<mat-card  *ngFor="let shipment of shipmentService.formatedShipments | paginate: { itemsPerPage: 5, currentPage: pageActual } |  filter:term | filterStatus:customerStatus | status:statusFilter"  class="mat-card_style animate__animated animate__backInLeft animate__delay-1s" (click)="onCreate(shipment)">
 
   <div fxLayout="row" fxLayoutAlign="">
     <div fxFlex="90" fxFlex.xs="80" fxFlex.sm="85" fxFlex.md="90" style="margin-bottom: 10px;">{{shipment.invoice[1]}}</div>
@@ -84,7 +93,7 @@
     </div>
   
     <div class="shipment_reference" fxFlex="15" fxFlex.xs="100%"  layout-align="between center" >
-      <div *ngFor="let ref of shipment.references">
+      <div *ngFor="let ref of shipment.referenceTransform">
         <b>{{ref.name}}</b> <br>
         {{ref.value}} <br> 
       </div>
@@ -105,28 +114,19 @@
   </div>
 
   <div fxLayout="row"  >
-    <div  fxFlex="10" class="progress-bar__flex" fXFlex.xs="25">
-      <mat-progress-bar class="animate__animated animate__backInLeft animate__delay-5s" mode="determinate" value="100"></mat-progress-bar>
-    </div>
-    <div fxFlex="1"> </div>
-    <div fxFlex="10" fXFlex.xs="25"  class="progress-bar__flex">
-      <mat-progress-bar class="animate__animated animate__backInLeft animate__delay-4s" mode="determinate" value="100"></mat-progress-bar>
-    </div>
-    <div fxFlex="1"></div>
-    <div fxFlex="10" class="progress-bar__flex" fXFlex.xs="25">
-      <mat-progress-bar class="animate__animated animate__backInLeft animate__delay-3s" mode="determinate" value="100"></mat-progress-bar>
-    </div>
-    <div fxFlex="1"></div>
-    <div fxFlex="10" class="progress-bar__flex" fXFlex.xs="25"> 
-      <mat-progress-bar class="animate__animated animate__backInLeft animate__delay-2s" mode="determinate" value="0"></mat-progress-bar>
-    </div>
+    
+      <div  *ngFor="let progress of ArrayOne(4); let i=index" fxFlex="10" class="progress-bar__flex" fXFlex.xs="25">
+        <mat-progress-bar  mode="determinate" [value]="shipment.progressBarState>=i+1?100:0"></mat-progress-bar> 
+        <div fxFlex="1"> </div>
+      
+      </div>
 
     <div fxFlex="50">
      
     </div>
     <div fxFlex="10"  class="custumer-charge">
       <div>
-        <b>{{shipment.customerRate  | currency}}</b> <br>
+        <b>{{shipment.sumCustomerRate  | currency}}</b> <br>
         {{shipment.customerRate.name}}
        
       </div>
@@ -135,13 +135,11 @@
 
     <div fxFlex="10" class="carrier-charge">
       <div>
-        <b>{{shipment.carrierRate  | currency}}</b> <br>
+        <b>{{shipment.sumCarrierRate  | currency}}</b> <br>
         {{shipment.carrierRate.name}}
       </div>
-     
+  
     </div>
-
-
   </div>
 </mat-card>
         

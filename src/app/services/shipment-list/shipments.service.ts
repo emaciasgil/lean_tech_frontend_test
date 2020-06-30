@@ -19,6 +19,7 @@ export class ShipmentsService {
   readonly ROOT_URL = 'https://square.lean-tech.io/jsonmock/api/orders/'
   constructor(private http: HttpClient) {
     this.getShipments();
+    
   }
 
 
@@ -46,11 +47,16 @@ export class ShipmentsService {
       //calculate end date
       finalDate: moment(shipment.createdDate, "DD/MM/YYYY").add(shipment.serviceDays, 'days').format("DD/MM/YYYY"),
       // Parse carrier y datos del cliente and Sum
-      customerRate: shipment.customerRate.map(item=>parseFloat(item.charge)).reduce((acc,curr)=>acc + curr,0),
-      carrierRate: shipment.carrierRate.map(item=>parseFloat(item.charge)).reduce((acc,curr)=>acc + curr,0),
+      sumCustomerRate: shipment.customerRate.map(item=>parseFloat(item.charge)).reduce((acc,curr)=>acc + curr,0),
+      sumCarrierRate: shipment.carrierRate.map(item=>parseFloat(item.charge)).reduce((acc,curr)=>acc + curr,0),
        invoice: shipment.references.map(item=>parseInt(item.value)),
-      
+       progressBarState:shipment.trackingDetails[0].status==="Delivered"? 4:3,
+       referenceTransform:shipment.references.map(item=>{
+        return { "name":item.name.slice(0,2).toUpperCase(),
+         "value":item.value}
+       }).sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))
        }));
+
 
   }
 
