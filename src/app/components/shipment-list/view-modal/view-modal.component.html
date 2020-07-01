@@ -10,18 +10,18 @@
 
 <!-- Shipment Information -->
   <div>
-    <div class="shipment-information__h3  animate__animated animate__backInLeft animate__delay-0.8s">
+    <div  class="shipment-information__h3  animate__animated animate__backInLeft animate__delay-0.8s">
       <div>
         <h3  ><b>Shipment Information</b></h3>
       </div>
-      <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" class="shipment_information__flex">
-        <div fxFlex="5%" fxFlex.xs="100%" fxFlex.sm="10" >
+      <div fxLayout="row" fxLayout.xs="column"  fxlayout.sm="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" class="shipment_information__flex">
+        <div fxFlex="5%" fxFlex.xs="100%" fxFlex.sm="40"  >
           <img   class="shipment-information__icon" src="../../../../assets/icons/shipment info.svg" alt="" srcset="">
         </div>
         <div fxFlex="95%">
-          <div fxLayout="column"  fxFlex.xs="100%">
+          <div fxLayout="column"  fxFlex.xs="100%" >
             <div  ><b>Shipment Information</b></div>
-            <div >view and update all shipment data, generate pickup request and change shipment
+            <div class="text-shipment_information"> view and update all shipment data, generate pickup request and change shipment
               status
             </div>
           </div>
@@ -124,7 +124,7 @@
         </div>
         <div fxFlex="70%" fxFlex.xs="20">
           <button class=" button-form__modal" style="width: 140px; height: 30px;">
-            <img style="vertical-align: middle;" src="../../../assets/icons/requote.svg"> Re-Quote
+            <img style="vertical-align: middle;" src="../../../assets/icons/requote.svg"><span class="requote_icon"> Re-Quote</span>
           </button>
         </div>
       </div>
@@ -154,28 +154,22 @@
           <div><b>SubAccount:</b></div>
           <div>
             <mat-form-field class="select-subaccount">
-              <mat-label matInput style="margin-left: 5px; color:white"> Customer 1</mat-label>
-              <mat-select>
-                <mat-option>
-                  1
-                </mat-option>
-                <mat-option>
-                  2
+              <mat-label matInput style="margin-left: 5px; color:white!important"> Customer </mat-label>
+              <mat-select [(ngModel)]="customerSelected">
+                <mat-option [value]="customer" *ngFor="let customer of customers">
+                  {{customer}}
                 </mat-option>
 
               </mat-select>
             </mat-form-field>
           </div>
-          <div><b>Location:</b></div>
+          <div><b style="color:white">Location:</b></div>
           <div>
             <mat-form-field class="select-location">
-              <mat-label matInput style="margin-left: 5px; color:white"> Customer 1</mat-label>
-              <mat-select>
-                <mat-option>
-                  1
-                </mat-option>
-                <mat-option>
-                  2
+              <mat-label matInput style="margin-left: 5px; color:white"> Tampa</mat-label>
+              <mat-select [(ngModel)]="locationSelected"  name="location" >
+                <mat-option [value]="location" *ngFor="let location of locations">
+                  {{location}}
                 </mat-option>
 
               </mat-select>
@@ -271,7 +265,7 @@
       <div fxFlex="70%" fxFlex.xs="80"><img class="shipment-information__rates" 
           src="../../../../assets/icons/rate.svg" /><b> Rates</b>
       </div>
-      <div  fxFlex="30%"  class="test3" fxFlex.xs="30"> <button class="button-form__modal  button-form_requote"
+      <div  fxFlex="30%"   fxFlex.xs="30"> <button class="button-form__modal  button-form_requote"
           style="width: 150px; height: 40px; margin-left: 35%; border: none; cursor: pointer;">
           <img style="vertical-align: middle;" src="../../../assets/icons/requote.svg"> <span class="button-form__requote-flex">Re-Quote</span>
         </button></div>
@@ -340,7 +334,7 @@
   </div>
 
 <!--Carrier and customer costs-->
-  <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" *ngFor="let charge of dataTable">
+  <div fxLayout="row" style="padding-top: 10px; margin-left: 35px;" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" *ngFor="let charge of dataTable">
       <div fxFlex="30%"><b>Carrier Total:</b> {{charge.sumCarrierRate | currency}}</div>  
       <div fxFlex="70%"> <b>Customer Total:</b> {{charge.sumCustomerRate | currency}}</div>
   </div>

@@ -73,11 +73,11 @@
   .status_h5{
     display: none !important;
   }
-  .test1{
+  .spacing-flex_status-carrier{
     flex-direction: row;
     padding-left: 16px;
   }
-  .test2{
+  .spacing-flex_status-customer{
     margin-left: 40px !important;
     padding-left: 10px;
   }
@@ -163,11 +163,12 @@
   .status_h5{
     display: none !important;
   }
-  .test1{
+
+  .spacing-flex_status-carrier{
     flex-direction: row;
     padding-left: 16px;
   }
-  .test2{
+  .spacing-flex_status-customer{
     margin-left: 40px !important;
     padding-left: 10px;
   }
@@ -224,12 +225,12 @@
   max-width: 30%;
 }
 
- .test1{
+ .spacing-flex_status-carrier{
   flex-direction: row;
   padding-left: 16px;
 }
 
-.test2{
+.spacing-flex_status-customer{
   margin-left: 40px !important;
   padding-left: 10px;
 }
@@ -271,11 +272,11 @@
   max-width: 7% !important;
 }
 
-.test2{
+.spacing-flex_status-customer{
   max-width: none !important
 }
 
-.test1{
+.spacing-flex_status-carrier{
   max-width: none !important;
 }
 
@@ -392,10 +393,11 @@ body.theme-default .mat-button-focus-overlay:hover {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
-  width: 80px;
-  height: 30px;
+  width: 149px;
+  height: 35px;
   text-align: center;
 }
+
 
 .select-carrrier__status {
   background: #dfdfdf;
@@ -403,7 +405,7 @@ body.theme-default .mat-button-focus-overlay:hover {
   -moz-border-radius: 100px;
   border-radius: 100px;
   width: 130px;
-  height: 30px;
+  height: 35px;
   text-align: center;
 }
 
@@ -413,7 +415,7 @@ body.theme-default .mat-button-focus-overlay:hover {
   -moz-border-radius: 100px;
   border-radius: 100px;
   width: 160px;
-  height: 30px;
+  height: 35px;
   text-align: center;
 }
 

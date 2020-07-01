@@ -30,12 +30,15 @@ export class ShipmentListComponent implements OnInit {
   id: string;
   public query: string;
   public form: FormGroup;
+  
 
   customerStatusList=["Extract Error","In Distribution","Ready For Audit","In Transit", "Pending",]
 
   carrierStatusList=["Ready","Error","Pending"]
 
   statusList=["In Transit", "Delivered"]
+
+  optionReset=["Clear FIlter"]
 
   customerStatus:string;
   carrierStatus:string;

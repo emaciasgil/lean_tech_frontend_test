@@ -16,16 +16,19 @@
       </div>
     </div>
     <div class="select-status__margin-top" fxFlex="40">
-       <!-- <button mat-icon-button matSuffix (click)="resetSearch()">
-          <mat-icon>clear</mat-icon>
-      </button> -->
+  
       <mat-form-field class="select-status">
         <!-- Select Status -->
 
         <mat-label style="margin-left: 5px; ">Customer
         
         </mat-label>
+    
+        
         <mat-select  [(ngModel)]="customerStatus" >
+          <mat-option [value]=""> Delete Filter <p  class="material-icons" style="vertical-align: middle;">
+            close
+          </p></mat-option> 
           <mat-option [value]="state" *ngFor="let state of customerStatusList">
               {{state}}
           </mat-option>
@@ -38,6 +41,9 @@
         </mat-label>
         
         <mat-select [(ngModel)]="carrierStatus">
+          <mat-option [value]=""> Delete Filter <p  style="vertical-align: middle;" class="material-icons">
+            close
+          </p></mat-option> 
           <mat-option  [value]="state" *ngFor="let state of carrierStatusList">
             {{state}}
           </mat-option>
@@ -45,8 +51,12 @@
       </mat-form-field>
       <div fxFlex="1"> </div>
       <mat-form-field class="select-customer__status">
+        
         <mat-label > Status</mat-label>
         <mat-select [(ngModel)]="statusFilter">
+          <mat-option [value]=""> Delete Filter<p style="vertical-align: middle;" class="material-icons">
+            close
+          </p></mat-option> 
           <mat-option [value]="state" *ngFor="let state of statusList">
             {{state}}
           </mat-option>
@@ -67,8 +77,8 @@
 <mat-card  *ngFor="let shipment of shipmentService.formatedShipments | paginate: { itemsPerPage: 5, currentPage: pageActual } |  filter:term | filterStatus:customerStatus | status:statusFilter"  class="mat-card_style animate__animated animate__backInLeft animate__delay-1s" (click)="onCreate(shipment)">
 
   <div fxLayout="row" fxLayoutAlign="">
-    <div fxFlex="90" fxFlex.xs="80" fxFlex.sm="85" fxFlex.md="90" style="margin-bottom: 10px;">{{shipment.invoice[1]}}</div>
-    <div  fxFlex="10" fxFlex.xs="20" fxFlex.sm="15" fxFlex.md="10"><div >{{shipment.createDateMenu }}<img  style="margin-left: 10px;" width="15px" src="../../../assets/icons/menu.png" alt=""></div ></div>
+    <div fxFlex="90" fxFlex.xs="70" fxFlex.sm="85" fxFlex.md="90" style="margin-bottom: 10px;">{{shipment.invoice[1]}}</div>
+    <div  fxFlex="10" fxFlex.xs="30" fxFlex.sm="15" fxFlex.md="10"><div >{{shipment.createDateMenu }}<img  style="margin-left: 10px;" width="15px" src="../../../assets/icons/menu.png" alt=""></div ></div>
   </div>
   
   <div fxLayout="row" class="container-shipment__information">
@@ -104,10 +114,10 @@
        <span class="shipment-company__span">{{shipment.companyName}}</span>
     </div>
     
-    <div fxFlex="10"  fxFlex.xs="25" class="test1"> <span class="status-carrier__span">Status Carrier</span>
+    <div fxFlex="10"  fxFlex.xs="25" class="spacing-flex_status-carrier"> <span class="status-carrier__span">Status Carrier</span>
       <mat-button-toggle class="button-status__carrier" style="height: 30px;     line-height: 0px;" value="bold" ><b style="color: blueviolet; margin-top: 0px;">Ready to strap</b></mat-button-toggle>
     </div>
-    <div fxFlex="10" fxFlex.xs="25" class="test2"><span class="status-customer__span">Status Customer</span>
+    <div fxFlex="10" fxFlex.xs="25" class="spacing-flex_status-customer"><span class="status-customer__span">Status Customer</span>
       <mat-button-toggle class="button-status__customer" value="bold" style="height: 30px;" ><b style="color: crimson;">{{shipment.customerStatus }}</b></mat-button-toggle>
 
     </div>
@@ -126,8 +136,8 @@
     </div>
     <div fxFlex="10"  class="custumer-charge">
       <div>
-        <b>{{shipment.sumCustomerRate  | currency}}</b> <br>
-        {{shipment.customerRate.name}}
+        <b>{{shipment.sumCarrierRate  | currency}}</b> <br>       
+        Carrier Rate
        
       </div>
      
@@ -135,8 +145,8 @@
 
     <div fxFlex="10" class="carrier-charge">
       <div>
-        <b>{{shipment.sumCarrierRate  | currency}}</b> <br>
-        {{shipment.carrierRate.name}}
+        <b>{{shipment.sumCustomerRate  | currency}}</b> <br>
+         Customer
       </div>
   
     </div>

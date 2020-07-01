@@ -49,6 +49,7 @@ export class ShipmentsService {
       // Parse carrier y datos del cliente and Sum
       sumCustomerRate: shipment.customerRate.map(item=>parseFloat(item.charge)).reduce((acc,curr)=>acc + curr,0),
       sumCarrierRate: shipment.carrierRate.map(item=>parseFloat(item.charge)).reduce((acc,curr)=>acc + curr,0),
+    
        invoice: shipment.references.map(item=>parseInt(item.value)),
        progressBarState:shipment.trackingDetails[0].status==="Delivered"? 4:3,
        referenceTransform:shipment.references.map(item=>{

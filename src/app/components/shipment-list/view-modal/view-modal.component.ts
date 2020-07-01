@@ -49,8 +49,10 @@ export class ViewModalComponent implements OnInit {
   addOnBlur = true;
   totalCarrier:number;
   totalCustomer:number;
-  
-
+  customers=["Customer1", "Customer2", "Customer3"]
+  locations=["New York", "Tampa", "San Francisco", "Las Vegas","Los Angeles"]  
+  customerSelected=""
+  locationSelected=""
   // Comma separated tags
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   shipments = [
